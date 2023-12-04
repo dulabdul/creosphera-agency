@@ -55,7 +55,7 @@ export default function Header() {
     },
   ];
   return (
-    <header className='w-full top-0 z-50 scrolled sm:no-scrolled flex items-center'>
+    <header className='w-full top-0 z-[99] scrolled sm:no-scrolled flex items-center absolute'>
       <Navbar
         fluid
         rounded

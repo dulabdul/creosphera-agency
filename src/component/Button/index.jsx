@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function CustomButton(props) {
   const className = [props.className];
@@ -91,31 +91,31 @@ export default function CustomButton(props) {
 }
 
 CustomButton.propTypes = {
-  type: propTypes.oneOf(['button', 'link']),
-  onClick: propTypes.func,
-  target: propTypes.string,
-  href: propTypes.string,
-  value: propTypes.string,
-  className: propTypes.string,
-  isLoading: propTypes.bool,
-  isDisabled: propTypes.bool,
-  isWidthAuto: propTypes.bool,
+  type: PropTypes.oneOf(['button', 'link']),
+  onClick: PropTypes.func,
+  target: PropTypes.string,
+  href: PropTypes.string,
+  value: PropTypes.string,
+  className: PropTypes.string,
+  isLoading: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isWidthAuto: PropTypes.bool,
 
-  isLight: propTypes.bool,
-  isBlock: propTypes.bool,
-  isFlex: propTypes.bool,
-  isFull: propTypes.bool,
-  isTransparent: propTypes.bool,
-  isPrimary: propTypes.bool,
-  isPrimaryHover: propTypes.bool,
-  isSecondary: propTypes.bool,
-  isSecondaryHover: propTypes.bool,
-  isRounded: propTypes.bool,
-  isHover: propTypes.bool,
-  ariaLabel: propTypes.string,
-  isRoundedFull: propTypes.bool,
-  isExternal: propTypes.bool,
-  hasShadow: propTypes.bool,
-  onClick: propTypes.func,
-  value: propTypes.string,
+  isLight: PropTypes.bool,
+  isBlock: PropTypes.bool,
+  isFlex: PropTypes.bool,
+  isFull: PropTypes.bool,
+  isTransparent: PropTypes.bool,
+  isPrimary: PropTypes.bool,
+  isPrimaryHover: PropTypes.bool,
+  isSecondary: PropTypes.bool,
+  isSecondaryHover: PropTypes.bool,
+  isRounded: PropTypes.bool,
+  isHover: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  isRoundedFull: PropTypes.bool,
+  isExternal: PropTypes.bool,
+  hasShadow: PropTypes.bool,
+  onClick: PropTypes.func,
+  value: PropTypes.string,
 };

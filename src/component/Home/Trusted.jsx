@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import CarouselSlider from '../Carousel/CarouselClient';
 import Card from '../Card';
@@ -24,25 +23,21 @@ export default function Trusted() {
       title: 'Harga Terjangkau',
       description:
         'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
-      icons: '/images/icons_ex.svg',
     },
     {
       title: 'Harga Terjangkau',
       description:
         'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
-      icons: '/images/ex_green.png',
     },
     {
       title: 'Harga Terjangkau',
       description:
         'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
-      icons: '/images/icons_ex.svg',
     },
     {
       title: 'Harga Terjangkau',
       description:
         'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
-      icons: '/images/ex_green.png',
     },
   ];
   return (
@@ -129,7 +124,6 @@ export default function Trusted() {
                     index === 2 ? 'md:row-start-3 md:col-start-2' : ''
                   }`}
                   isRed
-                  icons={item.icons}
                   title={item.title}
                   description={item.description}
                 />
@@ -139,7 +133,6 @@ export default function Trusted() {
                     index == 3 ? 'md:row-start-2' : ''
                   } ${index == 1 ? 'md:row-start-2 ' : ''}`}
                   isGreen
-                  icons={item.icons}
                   title={item.title}
                   description={item.description}
                 />

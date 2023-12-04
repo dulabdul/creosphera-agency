@@ -2,22 +2,37 @@ import Image from 'next/image';
 import React from 'react';
 import propTypes from 'prop-types';
 import Link from 'next/link';
-
+import { FaCheck } from 'react-icons/fa';
 export default function Card({
   isRed,
-  isHero,
   isGreen,
   isHasLink,
   href,
   className,
   title,
-  icons,
   description,
   isPortofolio,
   titlePortofolio,
   portofolioImageUrl,
+  isPrice,
 }) {
-  console.log(portofolioImageUrl);
+  const data = [
+    {
+      name: 'all limited links',
+    },
+    {
+      name: 'all limited links',
+    },
+    {
+      name: 'all limited links',
+    },
+    {
+      name: 'all limited links',
+    },
+    {
+      name: 'all limited links',
+    },
+  ];
   const classNames = [className];
   if (isRed)
     classNames.push(
@@ -40,9 +55,40 @@ export default function Card({
       </div>
     );
   }
-  if (isHero) {
+  if (isPrice) {
     return (
-      <div className='w-full h-full overflow-hidden bg-[url("/images/bg-wave.svg")]'></div>
+      <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs'>
+        <div className='flex justify-end'>
+          <div className='popular flex  rounded-full px-4 py-1 bg-[#C10A20]'>
+            <p className='uppercase text-white text-[10px]'>most popular</p>
+          </div>
+        </div>
+        <div className='card_price_content'>
+          <h4 className='text-white text-2xl lg:text-4xl font-semibold'>
+            Rp1,5 JT
+          </h4>
+          <h5 className='text-white text-xl lg:text-3xl font-medium mt-4'>
+            Enterprise
+          </h5>
+          <p className='text-white font-light text-sm lg:text-base leading-normal mt-2'>
+            cocok untuk website ecommerce, web trafic tinggi
+          </p>
+          {data.map((items, index) => {
+            return (
+              <div
+                key={index}
+                className='flex items-center gap-x-2 mt-2'>
+                <div className='bg-[#E9344A] rounded-full p-1 '>
+                  <FaCheck className='text-white text-xl' />
+                </div>
+                <p className='text-sm text-white capitalize font-medium'>
+                  {items.name}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     );
   }
   return (
@@ -62,7 +108,7 @@ export default function Card({
           isRed ? 'bg-[#FFECEA]' : 'bg-[#D2FCFF]'
         } rounded-xl`}>
         <Image
-          src={icons}
+          src={isGreen ? '/images/ex_green.png' : '/images/icons_ex.svg'}
           className='max-w-[50px] max-h-[50px]  w-full h-full'
           width={50}
           height={50}
@@ -70,8 +116,10 @@ export default function Card({
         />
       </div>
       <div className='text_content my-4 flex flex-col gap-y-2'>
-        <p className='font-medium text-2xl text-primary'>{title}</p>
-        <p className='font-normal text-base text-tersier'>{description}</p>
+        <p className='font-medium capitalize text-2xl text-primary'>{title}</p>
+        <p className='font-normal text-base capitalize text-tersier'>
+          {description}
+        </p>
         {isHasLink ? (
           <Link
             href={href}
@@ -93,6 +141,7 @@ Card.propTypes = {
   isGreen: propTypes.bool,
   isHasLink: propTypes.bool,
   isPortofolio: propTypes.bool,
+  isPrice: propTypes.bool,
   isHero: propTypes.bool,
   portofolioImageUrl: propTypes.string.isRequired,
   titlePortofolio: propTypes.string.isRequired,
