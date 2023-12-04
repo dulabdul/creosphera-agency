@@ -1,6 +1,6 @@
 @tailwind base;
 @layer base {
-  body {
+  .bg-gradient {
     background: linear-gradient(
       90deg,
       #e5fff3 0%,
