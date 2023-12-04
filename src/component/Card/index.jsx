@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export default function Card({
   isRed,
+  isHero,
   isGreen,
   isHasLink,
   href,
@@ -16,6 +17,7 @@ export default function Card({
   titlePortofolio,
   portofolioImageUrl,
 }) {
+  console.log(portofolioImageUrl);
   const classNames = [className];
   if (isRed)
     classNames.push(
@@ -36,6 +38,11 @@ export default function Card({
           className='w-full h-full'
         />
       </div>
+    );
+  }
+  if (isHero) {
+    return (
+      <div className='w-full h-full overflow-hidden bg-[url("/images/bg-wave.svg")]'></div>
     );
   }
   return (
@@ -86,6 +93,7 @@ Card.propTypes = {
   isGreen: propTypes.bool,
   isHasLink: propTypes.bool,
   isPortofolio: propTypes.bool,
+  isHero: propTypes.bool,
   portofolioImageUrl: propTypes.string.isRequired,
   titlePortofolio: propTypes.string.isRequired,
   href: propTypes.string,

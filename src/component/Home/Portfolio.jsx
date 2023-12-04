@@ -3,7 +3,6 @@ import React, { useEffect, useState, useMemo } from 'react';
 import Heading from '../Heading';
 import CustomButton from '../Button';
 import { Dropdown } from 'flowbite-react';
-import Image from 'next/image';
 import Card from '../Card';
 export default function Portfolio() {
   const data = {
@@ -82,7 +81,6 @@ export default function Portfolio() {
     ],
   };
   const [selectedCategory, setSelectedCategory] = useState('web development');
-  const [portoflioData, setPortofolioData] = useState(null);
   const [windowWith, setWindoWidth] = useState(null);
   useEffect(() => {
     setWindoWidth(window.screen.width);
@@ -159,7 +157,7 @@ export default function Portfolio() {
           {filterList?.map((item) => {
             return item.projects.length === 0
               ? '<p>No Data Portoflio</p>'
-              : item.projects.map((project) => (
+              : item?.projects?.map((project) => (
                   <Card
                     key={project.id}
                     isPortofolio

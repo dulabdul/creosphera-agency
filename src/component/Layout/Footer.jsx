@@ -50,7 +50,7 @@ export default function Footer() {
     ],
   };
   return (
-    <section className='w-full h-full overflow-hidden'>
+    <footer className='w-full h-full overflow-hidden'>
       <div className='z-10 w-full h-[80vh] absolute'>
         <Image
           alt='Spiral'
@@ -134,6 +134,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

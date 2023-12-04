@@ -5,7 +5,7 @@ import Image from 'next/image';
 import CustomButton from '../Button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-export default function NavbarWithCTAButton() {
+export default function Header() {
   const path = usePathname();
 
   const menus = [
@@ -84,7 +84,7 @@ export default function NavbarWithCTAButton() {
           </CustomButton>
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse>
+        <Navbar.Collapse className='z-[99]'>
           {menus.map((menu, index) => {
             return (
               <li
