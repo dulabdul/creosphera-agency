@@ -1,8 +1,10 @@
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';
-
+import { usePathname } from 'next/navigation';
 export default function Footer() {
+  const pathName = usePathname();
   const menuData = {
     menu: [
       {
@@ -50,7 +52,12 @@ export default function Footer() {
     ],
   };
   return (
-    <footer className='w-full h-full overflow-hidden bg-[url(/images/bg-wave-footer.svg)] bg-no-repeat bg-cover'>
+    <footer
+      className={`w-full h-full overflow-hidden ${
+        pathName === '/'
+          ? ''
+          : 'bg-[url(/images/bg-wave-footer.svg)] bg-no-repeat bg-cover'
+      }`}>
       <div className='z-10 w-full h-[80vh] absolute'>
         <Image
           alt='Spiral'

@@ -7,6 +7,9 @@ import CustomButton from '../Button';
 export default function Card({
   isRed,
   isGreen,
+  isCardSmall,
+  titleCardSmall,
+  descriptionCardSmall,
   isHasLink,
   href,
   className,
@@ -42,6 +45,46 @@ export default function Card({
           alt={titlePortofolio}
           className='w-full h-full'
         />
+      </div>
+    );
+  }
+  if (isCardSmall) {
+    return (
+      <div
+        className={`px-4 py-3 shadow-lg max-h-[100px] rounded-3xl border transition-all duration-200 ease-linear ${classNames.join(
+          ' '
+        )}`}>
+        <div className='flex justify-end'>
+          <Image
+            src='/images/spinner.png'
+            width={24}
+            height={24}
+            className='max-w-[24px] justify-end animate-rotate-tringale'
+            alt='Rectangle animation'
+          />
+        </div>
+        <div className='flex gap-x-2'>
+          <div
+            className={`flex w-[50px] h-[50px] justify-center items-center ${
+              isRed ? 'bg-[#FFECEA]' : 'bg-[#D2FCFF]'
+            } rounded-xl`}>
+            <Image
+              src={isGreen ? '/images/ex_green.png' : '/images/icons_ex.svg'}
+              className='max-w-[25px] max-h-[25px]  w-full h-full'
+              width={25}
+              height={25}
+              alt='Example Icons'
+            />
+          </div>
+          <div className='flex flex-col'>
+            <p className='capitalize font-medium text-primary text-lg  md:text-xl'>
+              Pay Per Click
+            </p>
+            <p className='text-sm font-light text-primary'>
+              Bayar hanya saat iklan di click
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -188,6 +231,7 @@ export default function Card({
 Card.propTypes = {
   isRed: propTypes.bool,
   isGreen: propTypes.bool,
+  isCardSmall: propTypes.bool,
   isHasLink: propTypes.bool,
   isPortofolio: propTypes.bool,
   isPrice: propTypes.bool,
@@ -198,6 +242,8 @@ Card.propTypes = {
   href: propTypes.string,
   className: propTypes.string,
   title: propTypes.string,
+  titleCardSmall: propTypes.string,
+  descriptionCardSmall: propTypes.string,
   description: propTypes.string,
   icons: propTypes.any,
 };

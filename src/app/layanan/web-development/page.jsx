@@ -1,11 +1,14 @@
-import Content from '@/component/Layanan/Website/Content';
-import Hero from '@/component/Layanan/Website/Hero';
+import HeroComponents from '@/component/Hero';
+import Content from '@/component/Layanan/Website';
 import React from 'react';
 
 export default function WebDev() {
   return (
     <>
-      <Hero />
+      <HeroComponents
+        title='web app development'
+        type='layanan'
+      />
       <Content />
     </>
   );
