@@ -14,6 +14,7 @@ module.exports = {
       tersier: '#6C757D',
       redColor: '#E71D36',
       cyanColor: '#2EC4B6',
+      'cyan-rgba': 'rgba(46,196,182, 0.15)',
     },
 
     extend: {

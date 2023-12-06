@@ -50,7 +50,7 @@ export default function Footer() {
     ],
   };
   return (
-    <footer className='w-full h-full overflow-hidden'>
+    <footer className='w-full h-full overflow-hidden bg-[url(/images/bg-wave-footer.svg)] bg-no-repeat bg-cover'>
       <div className='z-10 w-full h-[80vh] absolute'>
         <Image
           alt='Spiral'

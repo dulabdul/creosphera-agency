@@ -3,6 +3,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
+import CustomButton from '../Button';
 export default function Card({
   isRed,
   isGreen,
@@ -15,24 +16,13 @@ export default function Card({
   titlePortofolio,
   portofolioImageUrl,
   isPrice,
+  isPriceRed,
+  isPriceLight,
+  price,
+  descriptionPrice,
+  typePrice,
+  featurePrice,
 }) {
-  const data = [
-    {
-      name: 'all limited links',
-    },
-    {
-      name: 'all limited links',
-    },
-    {
-      name: 'all limited links',
-    },
-    {
-      name: 'all limited links',
-    },
-    {
-      name: 'all limited links',
-    },
-  ];
   const classNames = [className];
   if (isRed)
     classNames.push(
@@ -56,40 +46,99 @@ export default function Card({
     );
   }
   if (isPrice) {
-    return (
-      <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs'>
-        <div className='flex justify-end'>
-          <div className='popular flex  rounded-full px-4 py-1 bg-[#C10A20]'>
-            <p className='uppercase text-white text-[10px]'>most popular</p>
+    if (isPriceRed) {
+      return (
+        <div className='bg-[url("/images/bg-card-price.svg")] bg-no-repeat bg-cover bg-center card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs shadow-lg shadow-redColor'>
+          <div className='flex justify-end'>
+            <div className='popular flex  rounded-full px-4 py-1 bg-[#C10A20]'>
+              <p className='uppercase text-white text-[10px]'>most popular</p>
+            </div>
+          </div>
+          <div className='card_price_content'>
+            <h4 className='text-white text-2xl lg:text-4xl font-semibold'>
+              Rp{price} JT
+            </h4>
+            <h5 className='text-white capitalize text-xl lg:text-3xl font-medium mt-4'>
+              {typePrice}
+            </h5>
+            <p className='text-white capitalize font-light text-sm lg:text-base leading-normal mt-2'>
+              {descriptionPrice}
+            </p>
+            {featurePrice.map((items, index) => {
+              return (
+                <div
+                  key={index}
+                  className='flex items-center gap-x-2 mt-2'>
+                  <div className='bg-[#E9344A] rounded-full p-1 '>
+                    <FaCheck className='text-white text-xl' />
+                  </div>
+                  <p className='text-sm text-white capitalize font-medium'>
+                    {items.name}
+                  </p>
+                </div>
+              );
+            })}
+            <CustomButton
+              isRoundedFull
+              isFlex
+              isFull
+              isHover
+              className='items-center justify-center bg-white px-4 py-2 text-redColor font-semibold mt-4 hover:bg-gray-100'>
+              Pilih Paket
+            </CustomButton>
           </div>
         </div>
-        <div className='card_price_content'>
-          <h4 className='text-white text-2xl lg:text-4xl font-semibold'>
-            Rp1,5 JT
-          </h4>
-          <h5 className='text-white text-xl lg:text-3xl font-medium mt-4'>
-            Enterprise
-          </h5>
-          <p className='text-white font-light text-sm lg:text-base leading-normal mt-2'>
-            cocok untuk website ecommerce, web trafic tinggi
-          </p>
-          {data.map((items, index) => {
-            return (
-              <div
-                key={index}
-                className='flex items-center gap-x-2 mt-2'>
-                <div className='bg-[#E9344A] rounded-full p-1 '>
-                  <FaCheck className='text-white text-xl' />
+      );
+    }
+    if (isPriceLight) {
+      return (
+        <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-[#f6fffe] max-w-xs border border-t-sekunder border-s-sekunder border-e-sekunder  border-b-white hover:border-b-sekunder'>
+          <div className='flex justify-end'>
+            <Image
+              src='/images/spinner.png'
+              width={32}
+              height={32}
+              className='max-w-[32px] justify-end animate-rotate-tringale'
+              alt='Rectangle animation'
+            />
+          </div>
+
+          <div className='card_price_content'>
+            <h4 className='text-primary text-2xl lg:text-4xl font-semibold'>
+              Rp{price} JT
+            </h4>
+            <h5 className='text-primary capitalize text-xl lg:text-3xl font-medium mt-4'>
+              {typePrice}
+            </h5>
+            <p className='text-tersier capitalize font-light text-sm lg:text-base leading-normal mt-2'>
+              {descriptionPrice}
+            </p>
+            {featurePrice.map((items, index) => {
+              return (
+                <div
+                  key={index}
+                  className='flex items-center gap-x-2 mt-2'>
+                  <div className='bg-cyan-rgba rounded-full p-1 '>
+                    <FaCheck className='text-cyanColor text-xl' />
+                  </div>
+                  <p className='text-sm text-primary capitalize font-medium'>
+                    {items.name}
+                  </p>
                 </div>
-                <p className='text-sm text-white capitalize font-medium'>
-                  {items.name}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
+            <CustomButton
+              isRoundedFull
+              isFlex
+              isFull
+              isHover
+              className='items-center justify-center bg-cyan-rgba px-4 py-2 text-cyanColor font-semibold mt-4 hover:bg-gray-100'>
+              Pilih Paket
+            </CustomButton>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
   return (
     <div
@@ -142,7 +191,8 @@ Card.propTypes = {
   isHasLink: propTypes.bool,
   isPortofolio: propTypes.bool,
   isPrice: propTypes.bool,
-  isHero: propTypes.bool,
+  isPriceRed: propTypes.bool,
+  isPriceLight: propTypes.bool,
   portofolioImageUrl: propTypes.string.isRequired,
   titlePortofolio: propTypes.string.isRequired,
   href: propTypes.string,
