@@ -8,7 +8,7 @@ export default function FlashCard({ type, content }) {
     setIsActive(!isActive);
   };
   return (
-    <div className='flex items-center gap-x-2 py-8'>
+    <div className='flex flex-col lg:flex-row items-start md:items-center gap-x-2 py-8'>
       <CustomButton
         type='button'
         onClick={handleClickButton}
@@ -18,14 +18,14 @@ export default function FlashCard({ type, content }) {
         {type}
       </CustomButton>
       <div
-        className={`flex items-center w-[85%] gap-x-4 transition-all duration-500 ${
+        className={`flex flex-col lg:flex-row  items-start md:items-center md:w-[85%] gap-x-4 transition-all duration-500 ${
           isActive ? 'max-h-[500px' : 'max-h-0'
         }`}
         style={{
           maxHeight: isActive ? '500px' : '0px',
           opacity: isActive ? 1 : 0,
         }}>
-        <div className='float-left w-[200px] h-[1px] bg-primary'></div>
+        <div className='float-left w-[1px] h-[100px] max-h-[200px] ml-[10%] md:ml-0 md:w-[200px] md:h-[1px] bg-primary'></div>
         <div className='flex-1 '>
           {content.map((items, index) => {
             return (
