@@ -24,10 +24,6 @@ export default function Header() {
           route: '/layanan/web-development',
         },
         {
-          dropdownName: 'search engine optimization',
-          route: '/layanan/search-engine-optimization',
-        },
-        {
           dropdownName: 'digital marketing',
           route: '/layanan/digital-marketing',
         },

@@ -51,7 +51,7 @@ export default function Card({
   if (isCardSmall) {
     return (
       <div
-        className={`px-4 py-3 shadow-lg max-h-[100px] rounded-3xl border transition-all duration-200 ease-linear ${classNames.join(
+        className={`px-4 py-3 shadow-lg md:min-w-[360px] max-h-[100px] rounded-3xl border transition-all duration-200 ease-linear ${classNames.join(
           ' '
         )}`}>
         <div className='flex justify-end'>
@@ -78,10 +78,10 @@ export default function Card({
           </div>
           <div className='flex flex-col'>
             <p className='capitalize font-medium text-primary text-lg  md:text-xl'>
-              Pay Per Click
+              {titleCardSmall}
             </p>
             <p className='text-sm font-light text-primary'>
-              Bayar hanya saat iklan di click
+              {descriptionCardSmall}
             </p>
           </div>
         </div>
