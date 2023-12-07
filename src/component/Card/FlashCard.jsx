@@ -8,7 +8,7 @@ export default function FlashCard({ type, content }) {
     setIsActive(!isActive);
   };
   return (
-    <div className='flex flex-col lg:flex-row items-start md:items-center gap-x-2 py-8'>
+    <div className='flex relative flex-col lg:flex-row items-start md:items-center gap-x-2 py-8'>
       <CustomButton
         type='button'
         onClick={handleClickButton}
