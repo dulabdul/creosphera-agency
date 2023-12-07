@@ -9,7 +9,9 @@ export default function Body({ children, font }) {
   const pathName = usePathname();
   return (
     <body
-      className={`${pathName === '/' ? 'bg-gradient' : ''} ${font.className}`}>
+      className={`${pathName === '/' ? 'bg-gradient' : ''} ${
+        font.className
+      } font-sans`}>
       <Header />
       <main>{children}</main>
       <Footer />

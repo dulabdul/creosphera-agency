@@ -22,7 +22,7 @@ export default function FAQ() {
     },
   ];
   return (
-    <section className='w-full h-full overflow-hidden px-4 py-12 md:py-16'>
+    <div className='w-full h-full overflow-hidden py-12 md:py-16'>
       <div className='container mx-auto'>
         <Heading
           title='FAQs'
@@ -60,6 +60,6 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

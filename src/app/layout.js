@@ -1,6 +1,7 @@
 import Body from '@/component/Layout/Body';
 import './globals.css';
 import localFont from 'next/font/local';
+import { Poppins } from 'next/font/google';
 // Font files can be colocated inside of `app`
 
 export const metadata = {
@@ -31,6 +32,7 @@ const proximaNova = localFont({
     },
   ],
 });
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
