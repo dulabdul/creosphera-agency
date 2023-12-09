@@ -74,13 +74,17 @@ export default function FAQ() {
                       onClick={() => handleAccordion(index)}>
                       {item.title}
                     </CustomButton>
-                    <div className='flex justify-end h-[36px] w-[36px] items-center bg-cyanColor rounded-full px-2 py-1 transition-all duration-500'>
+
+                    <CustomButton
+                      className='flex justify-end h-[36px] w-[36px] items-center bg-cyanColor rounded-full px-2 py-1 transition-all duration-500'
+                      type='button'
+                      onClick={() => handleAccordion(index)}>
                       <IoIosArrowDown
                         className={`text-4xl text-white transition-all duration-500 ${
                           isActive === index ? '-rotate-180' : ''
                         }`}
                       />
-                    </div>
+                    </CustomButton>
                   </div>
                   <div
                     className={`${
