@@ -1,13 +1,30 @@
 'use client';
 
-import { Button, Navbar, Dropdown } from 'flowbite-react';
+import { Navbar, Dropdown } from 'flowbite-react';
 import Image from 'next/image';
 import CustomButton from '../Button';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 export default function Header() {
   const path = usePathname();
+  const [scrolledNav, setScrolledNav] = useState(null);
 
+  const handlerScroll = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop - 50,
+      behavior: 'smooth',
+    });
+  };
+  const listenScrollEvent = () => {
+    window.scrollY > 20 ? setScrolledNav('scrolled') : setScrolledNav('');
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent);
+    };
+  }, []);
   const menus = [
     {
       name: 'home',
@@ -51,7 +68,8 @@ export default function Header() {
     },
   ];
   return (
-    <header className='w-full top-0 z-[99] scrolled sm:no-scrolled flex items-center absolute'>
+    <header
+      className={`w-full top-0 z-[99] scrolled sm:no-scrolled flex items-center absolute ${scrolledNav}`}>
       <Navbar
         fluid
         rounded

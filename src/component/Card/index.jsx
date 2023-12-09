@@ -4,6 +4,7 @@ import propTypes from 'prop-types';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
 import CustomButton from '../Button';
+import { FaHandHoldingDollar } from 'react-icons/fa6';
 export default function Card({
   isRed,
   isGreen,
@@ -16,11 +17,13 @@ export default function Card({
   title,
   description,
   isPortofolio,
+  hrefPortofolio,
   titlePortofolio,
   portofolioImageUrl,
   isPrice,
   isPriceRed,
   isPriceLight,
+  icons,
   price,
   descriptionPrice,
   typePrice,
@@ -38,13 +41,19 @@ export default function Card({
   if (isPortofolio) {
     return (
       <div className='max-w-[375px] max-h-[275px] overflow-hidden transition-all duration-200 hover:scale-105'>
-        <Image
-          src={portofolioImageUrl}
-          width={375}
-          height={275}
-          alt={titlePortofolio}
-          className='w-full h-full'
-        />
+        <CustomButton
+          isExternal
+          type='link'
+          target='_blank'
+          href={hrefPortofolio}>
+          <Image
+            src={portofolioImageUrl}
+            width={375}
+            height={275}
+            alt={titlePortofolio}
+            className='w-full h-full'
+          />
+        </CustomButton>
       </div>
     );
   }
@@ -199,17 +208,16 @@ export default function Card({
         className={`flex w-[100px] h-[100px] justify-center items-center ${
           isRed ? 'bg-[#FFECEA]' : 'bg-[#D2FCFF]'
         } rounded-xl`}>
-        <Image
-          src={isGreen ? '/images/ex_green.png' : '/images/icons_ex.svg'}
-          className='max-w-[50px] max-h-[50px]  w-full h-full'
-          width={50}
-          height={50}
-          alt='Example Icons'
-        />
+        <div
+          className={`text-6xl ${
+            isGreen ? 'text-cyanColor' : 'text-redColor'
+          }`}>
+          {icons}
+        </div>
       </div>
       <div className='text_content my-4 flex flex-col gap-y-2'>
         <p className='font-medium capitalize text-2xl text-primary'>{title}</p>
-        <p className='font-normal text-base capitalize text-tersier'>
+        <p className='font-normal text-base text-tersier leading-normal'>
           {description}
         </p>
         {isHasLink ? (
@@ -237,6 +245,7 @@ Card.propTypes = {
   isPrice: propTypes.bool,
   isPriceRed: propTypes.bool,
   isPriceLight: propTypes.bool,
+  icons: propTypes.node,
   portofolioImageUrl: propTypes.string.isRequired,
   titlePortofolio: propTypes.string.isRequired,
   href: propTypes.string,

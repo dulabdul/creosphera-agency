@@ -18,14 +18,14 @@ export default function About() {
           </div>
           <div className='w-full h-full flex gap-y-2 flex-col '>
             <h2 className='text-sekunder font-medium text-2xl'>Tentang Kami</h2>
-            <h3 className='text-primary font-semibold text-3xl md:text-5xl'>
+            <h3 className='text-primary font-semibold text-3xl leading-loose md:text-5xl'>
               Mengenal Kami Membuat Anda Percaya
             </h3>
             <p className='text-primary font-normal text-lg'>
               CreoSphera telah membantu banyak perusahaan dan perorangan dalam
               mencapai tujuan finansial dan branding mereka.
             </p>
-            <p className='text-tersier text-base tracking-wider'>
+            <p className='text-tersier text-base tracking-wider leading-relaxed'>
               Kami menawarkan berbagai jenis website, mulai dari website
               perusahaan, toko online, blog, hingga website pribadi. Semua
               website yang kami buat dilengkapi dengan tampilan yang menarik,
@@ -35,7 +35,7 @@ export default function About() {
             </p>
             <CustomButton
               type='link'
-              href='/'
+              href='/tentang-kami'
               isSecondary
               isSecondaryHover
               isRounded

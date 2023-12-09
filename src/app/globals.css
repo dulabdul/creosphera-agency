@@ -76,4 +76,10 @@
   .accordion_faq button {
     @apply focus:ring-0 hover:rounded-[32px];
   }
+  .scrolled {
+    transition: all 0.3s linear;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
+    @apply shadow-md shadow-indigo-200/10;
+  }
 }

@@ -2,64 +2,79 @@ import React from 'react';
 import CarouselSlider from '../Carousel/CarouselClient';
 import Card from '../Card';
 import CustomButton from '../Button';
-
+import { FaHandHoldingDollar } from 'react-icons/fa6';
+import { BiSupport } from 'react-icons/bi';
+import { DiResponsive } from 'react-icons/di';
+import { MdOutlineSecurity } from 'react-icons/md';
 export default function Trusted() {
   const list = [
     {
-      text: 'PageTraffic offers top notch SEO and digital marketing solutions to help you rank high on search results, connect with.',
+      text: 'Pengerjaan Cepat.',
     },
     {
-      text: 'PageTraffic offers top notch SEO and digital marketing solutions to help you rank high on search results, connect with.',
+      text: 'Gratis Sertifikat SSL/HTTPS',
     },
     {
-      text: 'PageTraffic offers top notch SEO and digital marketing solutions to help you rank high on search results, connect with.',
+      text: 'Full Akses Pengelolaan Website',
     },
     {
-      text: 'PageTraffic offers top notch SEO and digital marketing solutions to help you rank high on search results, connect with.',
+      text: 'Garansi Seumur Hidup.',
+    },
+    {
+      text: 'Konsultasi Gratis.',
+    },
+    {
+      text: 'Include Panduan',
     },
   ];
   const cardList = [
     {
       title: 'Harga Terjangkau',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Solusi digital terbaik dengan harga terjangkau! Kembangkan online presence bisnis Anda dengan layanan web development dan digital marketing yang hemat biaya.',
+      icons: <FaHandHoldingDollar />,
     },
     {
-      title: 'Harga Terjangkau',
+      title: '24/7 Support',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Kami siap memberikan dukungan penuh 24 jam sehari, 7 hari seminggu, untuk menjamin kelancaran dan kesuksesan digital bisnis Anda.',
+      icons: <BiSupport />,
     },
     {
-      title: 'Harga Terjangkau',
+      title: 'Responsive Desain',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Kami membawa pengalaman online Anda ke level berikutnya dengan desain responsif khusus, memastikan situs web Anda terlihat menakjubkan di setiap perangkat.',
+      icons: <DiResponsive />,
     },
     {
-      title: 'Harga Terjangkau',
+      title: 'Security Terjamin',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Dengan teknologi keamanan terkini, kami menjamin keamanan situs web Anda dengan perlindungan yang tak tertandingi.',
+      icons: <MdOutlineSecurity />,
     },
   ];
   return (
-    <section className='w-full h-full overflow-hidden px-4 py-16 md:py-24'>
+    <div className='w-full h-full overflow-hidden px-4 py-16 md:py-24'>
       <div className='container mx-auto'>
-        <div className='mb-10 md:mb-6'>
+        {/* <div className='mb-10 md:mb-6'>
           <h2 className='text-sekunder font-medium text-[42px] text-center'>
             Trusted By
           </h2>
           <p className='text-primary font-normal text-base text-center'>
-            Dipercaya oleh ratusan perusahaan ternama
+            Dipercaya oleh puluhan perusahaan ternama
           </p>
         </div>
-        <CarouselSlider />
+        <CarouselSlider /> */}
         <div className='grid gap-x-6 gap-y-16 md:gap-y-0 grid-cols-1 items-center md:grid-cols-12 pt-12 pb-6'>
           <div className='flex flex-col md:col-start-1 md:col-end-7'>
             <h2 className='text-primary font-medium text-3xl md:text-4xl'>
               Kenapa Memilih Kami?
             </h2>
-            <p className='text-tersier font-light text-sm'>
-              PageTraffic offers top notch SEO and digital marketing solutions
-              to help you rank high on search results, connect with.
+            <p className='text-tersier font-light text-sm leading-relaxed'>
+              Kami adalah sebuah agency berpengalaman lebih dari 2 tahun di
+              bidang digitalisasi, fokus pada layanan web development dan
+              digital marketing. Kami berkomitmen untuk memberikan solusi
+              terbaik dalam menghadirkan keberhasilan digital bagi bisnis Anda.
             </p>
             <ul>
               {list.map((item, index) => {
@@ -116,7 +131,7 @@ export default function Trusted() {
               Hubungi Kami
             </CustomButton>
           </div>
-          <div className='w-full flex flex-wrap justify-start md:grid md:grid-rows-3 md:grid-cols-2 md:col-start-7 gap-y-4 md:col-end-13'>
+          <div className='w-full flex flex-wrap justify-center md:grid md:grid-rows-3 md:grid-cols-2 md:col-start-7 gap-y-4 md:col-end-13'>
             {cardList.map((item, index) => {
               return index % 2 === 0 ? (
                 <Card
@@ -124,6 +139,7 @@ export default function Trusted() {
                     index === 2 ? 'md:row-start-3 md:col-start-2' : ''
                   }`}
                   isRed
+                  icons={item.icons}
                   title={item.title}
                   description={item.description}
                 />
@@ -133,6 +149,7 @@ export default function Trusted() {
                     index == 3 ? 'md:row-start-2' : ''
                   } ${index == 1 ? 'md:row-start-2 ' : ''}`}
                   isGreen
+                  icons={item.icons}
                   title={item.title}
                   description={item.description}
                 />
@@ -141,6 +158,6 @@ export default function Trusted() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

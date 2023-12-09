@@ -13,39 +13,33 @@ export default function PortfolioCard() {
         projects: [
           {
             id: 1,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_1.png',
+            title: 'Minerva Rooms',
+            url: 'https://www.minervarooms.com/',
+            imageUrl: '/images/project/minerva.webp',
           },
           {
             id: 2,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_2.png',
+            title: 'Publik Nasional',
+            url: 'https://publiknasional.com/',
+            imageUrl: '/images/project/publikNasional.webp',
           },
           {
             id: 3,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_3.png',
+            title: 'Portofolio',
+            url: 'https://ar-portofolio.my.id/',
+            imageUrl: '/images/project/Portofolio.webp',
           },
           {
-            id: 1,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_1.png',
+            id: 4,
+            title: 'Car Mania',
+            url: 'https://rent-car-theta.vercel.app/',
+            imageUrl: '/images/project/rentCar.webp',
           },
           {
-            id: 2,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_2.png',
-          },
-          {
-            id: 3,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_3.png',
+            id: 5,
+            title: 'Space Consultant',
+            url: 'https://consultan-ads.vercel.app/',
+            imageUrl: '/images/project/consultant.webp',
           },
         ],
       },
@@ -54,46 +48,28 @@ export default function PortfolioCard() {
         projects: [
           {
             id: 1,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_2.png',
+            title: 'Ads 1',
+            imageUrl: '/images/project/ads1.png',
           },
           {
             id: 2,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-
-            imageUrl: '/images/porto_1.png',
+            title: 'Ads 2',
+            imageUrl: '/images/project/ads2.png',
           },
           {
             id: 3,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_3.png',
-          },
-        ],
-      },
-      {
-        name: 'search engine optimization',
-        projects: [
-          {
-            id: 1,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-
-            imageUrl: '/images/porto_3.png',
+            title: 'Ads 3',
+            imageUrl: '/images/project/ads3.png',
           },
           {
-            id: 2,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_2.png',
+            id: 4,
+            title: 'Ads 4',
+            imageUrl: '/images/project/ads5.png',
           },
           {
-            id: 3,
-            title: 'BillsStone Luxury',
-            url: 'https://facebook.com',
-            imageUrl: '/images/porto_1.png',
+            id: 5,
+            title: 'Ads 5',
+            imageUrl: '/images/project/ads5.png',
           },
         ],
       },
@@ -175,6 +151,7 @@ export default function PortfolioCard() {
                 : item?.projects?.slice(0, 3).map((project) => (
                     <Card
                       key={project.id}
+                      hrefPortofolio={project.url}
                       isPortofolio
                       titlePortofolio={project.name}
                       portofolioImageUrl={project.imageUrl}
@@ -187,6 +164,7 @@ export default function PortfolioCard() {
                 : item?.projects?.map((project) => (
                     <Card
                       key={project.id}
+                      hrefPortofolio={project.url}
                       isPortofolio
                       titlePortofolio={project.name}
                       portofolioImageUrl={project.imageUrl}

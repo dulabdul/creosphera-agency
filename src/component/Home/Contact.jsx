@@ -3,7 +3,7 @@ import CustomButton from '../Button';
 
 export default function Contact() {
   return (
-    <section className='w-full h-full overflow-hidden py-12 md:pt-24 pb-0 px-4'>
+    <div className='w-full h-full overflow-hidden py-12 md:pt-24 pb-0 px-4'>
       <div className='container mx-auto'>
         <div className='flex flex-wrap md:flex-nowrap items-center'>
           <div className='flex flex-col gap-y-8'>
@@ -37,6 +37,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

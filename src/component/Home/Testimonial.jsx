@@ -6,40 +6,32 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Testimonial() {
   const data = [
     {
-      name: 'Shirley Fultz',
-      job: 'Designer',
+      name: 'Reva',
+      job: 'Photographer',
       review:
-        ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui distinctio error explicabo sapiente labore odio perspiciatis voluptatum ipsum iure ullam.',
+        ' Serius, web buat bisnis gue keren banget berkat jasa web development mereka! Sederhana tapi elegan, mantap deh',
       star: 4.8,
       imgUrl: '/images/testi.png',
     },
     {
-      name: 'John Doe',
-      job: 'Backend Dev',
+      name: 'Ahmad',
+      job: 'Owner Rental Apartement',
       review:
-        ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui distinctio error explicabo sapiente labore odio perspiciatis voluptatum ipsum iure ullam.',
+        ' Pengalaman iklan di Google? Top markotop! Digital marketing mereka tuh beneran jagoan, iklan gue keliatan di mana-mana!',
       star: 4.5,
       imgUrl: '/images/testi.png',
     },
     {
-      name: 'Nao Lynn',
-      job: 'Public Relationship',
-      review:
-        ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui distinctio error explicabo sapiente labore odio perspiciatis voluptatum ipsum iure ullam.',
-      star: 5,
-      imgUrl: '/images/testi.png',
-    },
-    {
       name: 'Linda',
-      job: 'Broadcasting',
+      job: 'PNS',
       review:
-        ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui distinctio error explicabo sapiente labore odio perspiciatis voluptatum ipsum iure ullam.',
-      star: 4.4,
+        'Mereka beneran ngerti gimana bikin web yang gampang diakses dari mana aja. Kerennya, gak ribet, gue satisfied banget sama hasilnya!',
+      star: 5,
       imgUrl: '/images/testi.png',
     },
   ];
   return (
-    <section className='w-full h-full overflow-hidden px-4 py-12 md:py-24'>
+    <div className='w-full h-full overflow-hidden px-4 py-12 md:py-24'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-12'>
           <div className='md:col-start-1 md:col-end-4 flex flex-col gap-y-4'>
@@ -72,13 +64,13 @@ export default function Testimonial() {
                     <p className='text-start text-primary font-normal text-bas md:text-lg'>
                       {items.review}
                     </p>
-                    <Image
+                    {/* <Image
                       src={items.imgUrl}
                       alt={items.name}
                       width={32}
                       height={32}
                       className='max-w-[36px] max-h-[36px]'
-                    />
+                    /> */}
                     <p className='text-primary text-start font-normal md:text-xl text-base'>
                       {items.name}
                     </p>
@@ -92,6 +84,6 @@ export default function Testimonial() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
