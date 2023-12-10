@@ -3,127 +3,227 @@ import Image from 'next/image';
 import CustomButton from '@/component/Button';
 import Heading from '@/component/Heading';
 import Card from '@/component/Card';
+import { FaMobileScreenButton } from 'react-icons/fa6';
+import {
+  FaDoorOpen,
+  FaSearch,
+  FaCreditCard,
+  FaRocketchat,
+} from 'react-icons/fa';
+import { BiWorld } from 'react-icons/bi';
 export default function Content() {
   const dataReason = [
     {
-      title: 'harga terjangkau',
-      description: 'harga yang murah untuk sebuah digitalisasi',
-    },
-    {
-      title: 'fast respond',
+      title: 'Tampilan Profesional',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Website berkualitas tinggi memberikan kesan profesional yang kuat kepada pengunjung. Dengan desain menarik dan terstruktur, halaman website bisa menarik perhatian mereka sejak awal.',
+      icons: <FaMobileScreenButton />,
     },
     {
-      title: 'harga terjangkau',
-      description: 'harga yang murah untuk sebuah digitalisasi',
-    },
-    {
-      title: 'fast respond',
+      title: 'Kenyamanan Akses',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Dengan website, pelanggan bisa mengakses informasi tentang produk atau layanan Anda dengan mudah kapan saja. Kenyamanan ini menjadi daya tarik tersendiri bagi mereka yang menginginkan kemudahan dalam mencari informasi.',
+      icons: <FaDoorOpen />,
     },
     {
-      title: 'harga terjangkau',
-      description: 'harga yang murah untuk sebuah digitalisasi',
-    },
-    {
-      title: 'fast respond',
+      title: 'Keterjangkauan Lebih Luas',
       description:
-        'Kami berkomitmen untuk memberikan ON Time Support Fast Respon ketika Anda butuh bantuan.',
+        'Dengan hadirnya website, bisnis Anda bisa menjangkau pelanggan dari berbagai lokasi. Hal ini meningkatkan potensi menarik minat dari sejumlah calon konsumen yang berbeda-beda.',
+      icons: <BiWorld />,
+    },
+    {
+      title: 'Tampil di Pencarian',
+      description:
+        'Website yang dioptimalkan untuk mesin pencari membantu bisnis Anda muncul di hasil pencarian. Ini membuat lebih banyak orang menemukan dan tertarik untuk melihat lebih lanjut tentang apa yang ditawarkan.',
+      icons: <FaSearch />,
+    },
+    {
+      title: 'Kemudahan Bertransaksi',
+      description:
+        'Jika terdapat layanan e-commerce, pelanggan dapat dengan mudah melakukan pembelian atau pemesanan, menarik bagi mereka yang mencari kenyamanan dalam berbelanja.',
+      icons: <FaCreditCard />,
+    },
+    {
+      title: 'Interaksi yang Reaktif',
+      description:
+        'Website yang responsif dan interaktif meningkatkan keterlibatan pelanggan. Dengan konten yang menarik dan fitur yang responsif, pelanggan akan merasa tertarik untuk tetap berinteraksi dan kembali lagi ke website Anda.',
+      icons: <FaRocketchat />,
     },
   ];
   const dataPrice = [
     {
-      price: '1,5',
-      type: 'enterprise',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
+      price: 599.0,
+      suffix: 'ribu',
+      type: 'essential',
+      description: 'cocok untuk landing page, portofolio, dan UMKM',
       fitur: [
         {
-          name: 'all limited links',
+          name: 'Sekali bayar, tanpa perpanjangan',
         },
         {
-          name: 'all limited links',
+          name: 'desain 4 halaman',
         },
         {
-          name: 'all limited links',
+          name: 'mobile friendly',
         },
         {
-          name: 'all limited links',
+          name: 'optimisasi page speed',
         },
         {
-          name: 'all limited links',
+          name: 'termasuk domain .com ',
         },
         {
-          name: 'all limited links',
+          name: 'termasuk hosting',
         },
         {
-          name: 'all limited links',
+          name: 'full akses login cms dan cpanel',
         },
         {
-          name: 'all limited links',
+          name: 'fitur chat whatsapp',
+        },
+        {
+          name: 'revisi 2x',
+        },
+        {
+          name: 'security SSL + HTTPS',
+        },
+        {
+          name: 'Full Support',
+        },
+        {
+          name: 'Unlimited Garansi',
+        },
+        {
+          name: 'dokumen panduan',
+        },
+      ],
+    },
+
+    {
+      price: 1.249,
+      suffix: 'JT',
+      type: 'enterprise',
+      description:
+        'cocok untuk website ecommerce kompleks, web traffic tinggi, dan bisnis profesional lainnya',
+      fitur: [
+        {
+          name: 'Sekali bayar, tanpa perpanjangan',
+        },
+        {
+          name: 'desain 10 halaman',
+        },
+        {
+          name: 'mobile friendly',
+        },
+        {
+          name: 'optimisasi page speed',
+        },
+        {
+          name: 'termasuk domain .com ',
+        },
+        {
+          name: 'termasuk hosting',
+        },
+        {
+          name: 'full akses login cms dan cpanel',
+        },
+        {
+          name: 'fitur chat whatsapp',
+        },
+        {
+          name: 'fitur livechat',
+        },
+        {
+          name: 'intregrasi google analytics 4',
+        },
+        {
+          name: 'intregrasi sosial media',
+        },
+        {
+          name: 'intregrasi payment gateaway',
+        },
+        {
+          name: 'intregrasi shipping method',
+        },
+        {
+          name: 'catalog product',
+        },
+        {
+          name: 'SEO Optimisasi',
+        },
+        {
+          name: 'revisi 5x',
+        },
+        {
+          name: 'security SSL + HTTPS',
+        },
+        {
+          name: 'Full Support',
+        },
+        {
+          name: 'Unlimited Garansi',
+        },
+        {
+          name: 'dokumen panduan',
         },
       ],
     },
     {
-      price: '1,5',
-      type: 'enterprise',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
+      price: 749.0,
+      suffix: 'ribu',
+      type: 'Enhanced',
+      description: 'cocok untuk ecommerce sederhana, blog',
       fitur: [
         {
-          name: 'all limited links',
+          name: 'Sekali bayar, tanpa perpanjangan',
         },
         {
-          name: 'all limited links',
+          name: 'desain 6 halaman',
         },
         {
-          name: 'all limited links',
+          name: 'mobile friendly',
         },
         {
-          name: 'all limited links',
+          name: 'optimisasi page speed',
         },
         {
-          name: 'all limited links',
+          name: 'termasuk domain .com ',
         },
         {
-          name: 'all limited links',
+          name: 'termasuk hosting',
         },
         {
-          name: 'all limited links',
+          name: 'full akses login cms dan cpanel',
         },
         {
-          name: 'all limited links',
-        },
-      ],
-    },
-    {
-      price: '1,5',
-      type: 'enterprise',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
-      fitur: [
-        {
-          name: 'all limited links',
+          name: 'fitur chat whatsapp',
         },
         {
-          name: 'all limited links',
+          name: 'fitur livechat',
         },
         {
-          name: 'all limited links',
+          name: 'intregrasi google analytics 4',
         },
         {
-          name: 'all limited links',
+          name: 'intregrasi sosial media',
         },
         {
-          name: 'all limited links',
+          name: 'catalog product',
         },
         {
-          name: 'all limited links',
+          name: 'revisi 3x',
         },
         {
-          name: 'all limited links',
+          name: 'security SSL + HTTPS',
         },
         {
-          name: 'all limited links',
+          name: 'Full Support',
+        },
+        {
+          name: 'Unlimited Garansi',
+        },
+        {
+          name: 'dokumen panduan',
         },
       ],
     },
@@ -151,7 +251,7 @@ export default function Content() {
             Memiliki website yang profesional dan responsif dapat memberikan
             kesan yang baik bagi calon pelanggan.
           </p>
-          <p className='text-tersier font-light text-base leading-normal lg:text-xl'>
+          <p className='text-tersier font-light text-base leading-relaxed lg:text-xl'>
             Di era digital saat ini, keberadaan website menjadi salah satu hal
             yang sangat penting bagi setiap bisnis. Selain sebagai media untuk
             memperkenalkan produk atau jasa yang ditawarkan, website juga dapat
@@ -184,6 +284,7 @@ export default function Content() {
                 title={item.title}
                 isRed
                 description={item.description}
+                icons={item.icons}
               />
             ) : (
               <Card
@@ -192,6 +293,7 @@ export default function Content() {
                 title={item.title}
                 description={item.description}
                 isGreen
+                icons={item.icons}
               />
             );
           })}
@@ -215,6 +317,7 @@ export default function Content() {
                 featurePrice={items.fitur}
                 isPriceLight
                 isPrice
+                suffixPrice={items.suffix}
               />
             ) : (
               <Card
@@ -223,6 +326,7 @@ export default function Content() {
                 typePrice={items.type}
                 featurePrice={items.fitur}
                 isPrice
+                suffixPrice={items.suffix}
                 isPriceRed
               />
             );

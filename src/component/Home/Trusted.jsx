@@ -12,6 +12,9 @@ export default function Trusted() {
       text: 'Pengerjaan Cepat.',
     },
     {
+      text: 'Sekali Bayar. Tanpa Perpanjangan',
+    },
+    {
       text: 'Gratis Sertifikat SSL/HTTPS',
     },
     {

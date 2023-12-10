@@ -41,6 +41,12 @@ export default function PortfolioCard() {
             url: 'https://consultan-ads.vercel.app/',
             imageUrl: '/images/project/consultant.webp',
           },
+          {
+            id: 6,
+            title: 'Albar Tech CCTV',
+
+            imageUrl: '/images/project/albartech.webp',
+          },
         ],
       },
       {

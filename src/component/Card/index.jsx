@@ -25,6 +25,7 @@ export default function Card({
   isPriceLight,
   icons,
   price,
+  suffixPrice,
   descriptionPrice,
   typePrice,
   featurePrice,
@@ -100,7 +101,7 @@ export default function Card({
   if (isPrice) {
     if (isPriceRed) {
       return (
-        <div className='bg-[url("/images/bg-card-price.svg")] bg-no-repeat bg-cover bg-center card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs shadow-lg shadow-redColor'>
+        <div className='bg-[url("/images/bg-card-price.svg")] bg-no-repeat bg-cover bg-center card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs shadow-lg shadow-redColor h-[1050px]'>
           <div className='flex justify-end'>
             <div className='popular flex  rounded-full px-4 py-1 bg-[#C10A20]'>
               <p className='uppercase text-white text-[10px]'>most popular</p>
@@ -108,7 +109,10 @@ export default function Card({
           </div>
           <div className='card_price_content'>
             <h4 className='text-white text-2xl lg:text-4xl font-semibold'>
-              Rp{price} JT
+              Rp
+              {suffixPrice === 'JT'
+                ? `${price}${suffixPrice}`
+                : `${price}${suffixPrice}`}
             </h4>
             <h5 className='text-white capitalize text-xl lg:text-3xl font-medium mt-4'>
               {typePrice}
@@ -134,8 +138,7 @@ export default function Card({
               isRoundedFull
               isFlex
               isFull
-              isHover
-              className='items-center justify-center bg-white px-4 py-2 text-redColor font-semibold mt-4 hover:bg-gray-100'>
+              className='items-center justify-center px-4 py-2 font-semibold mt-4 bg-white hover:bg-gray-300 transition-all'>
               Pilih Paket
             </CustomButton>
           </div>
@@ -144,7 +147,7 @@ export default function Card({
     }
     if (isPriceLight) {
       return (
-        <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-[#f6fffe] max-w-xs border border-t-sekunder border-s-sekunder border-e-sekunder  border-b-white hover:border-b-sekunder'>
+        <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-[#f6fffe] max-w-xs max-h-[1100px] border border-t-sekunder border-s-sekunder border-e-sekunder  border-b-white hover:border-b-sekunder h-[1050px]'>
           <div className='flex justify-end'>
             <Image
               src='/images/spinner.png'
@@ -155,36 +158,42 @@ export default function Card({
             />
           </div>
 
-          <div className='card_price_content'>
-            <h4 className='text-primary text-2xl lg:text-4xl font-semibold'>
-              Rp{price} JT
-            </h4>
-            <h5 className='text-primary capitalize text-xl lg:text-3xl font-medium mt-4'>
-              {typePrice}
-            </h5>
-            <p className='text-tersier capitalize font-light text-sm lg:text-base leading-normal mt-2'>
-              {descriptionPrice}
-            </p>
-            {featurePrice.map((items, index) => {
-              return (
-                <div
-                  key={index}
-                  className='flex items-center gap-x-2 mt-2'>
-                  <div className='bg-cyan-rgba rounded-full p-1 '>
-                    <FaCheck className='text-cyanColor text-xl' />
+          <div className='card_price_content flex flex-col h-full w-full overflow-hidden justify-evenly'>
+            <div className='flex flex-col justify-between h-[70%]'>
+              <h4 className='text-primary text-2xl lg:text-4xl font-semibold'>
+                Rp
+                {suffixPrice === 'JT'
+                  ? `${price}${suffixPrice}`
+                  : `${price}${suffixPrice}`}
+              </h4>
+              <h5 className='text-primary capitalize text-xl lg:text-3xl font-medium mt-4'>
+                {typePrice}
+              </h5>
+              <p className='text-tersier capitalize font-light text-sm lg:text-base leading-normal mt-2'>
+                {descriptionPrice}
+              </p>
+              {featurePrice.map((items, index) => {
+                return (
+                  <div
+                    key={index}
+                    className='flex items-center gap-x-2 mt-2'>
+                    <div className='bg-cyan-rgba rounded-full p-1 '>
+                      <FaCheck className='text-cyanColor text-xl' />
+                    </div>
+                    <p className='text-sm text-primary capitalize font-medium'>
+                      {items.name}
+                    </p>
                   </div>
-                  <p className='text-sm text-primary capitalize font-medium'>
-                    {items.name}
-                  </p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
             <CustomButton
               isRoundedFull
               isFlex
               isFull
-              isHover
-              className='items-center justify-center bg-cyan-rgba px-4 py-2 text-cyanColor font-semibold mt-4 hover:bg-gray-100'>
+              isSecondary
+              isSecondaryHover
+              className='items-center justify-center text-white px-4 py-2 font-semibold mt-4'>
               Pilih Paket
             </CustomButton>
           </div>
