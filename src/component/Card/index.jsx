@@ -61,7 +61,7 @@ export default function Card({
   if (isCardSmall) {
     return (
       <div
-        className={`px-4 py-3 shadow-lg md:min-w-[360px] max-h-[100px] rounded-3xl border transition-all duration-200 ease-linear ${classNames.join(
+        className={`px-4 py-3 shadow-lg rounded-3xl border transition-all duration-200 ease-linear min-h-[200px] ${classNames.join(
           ' '
         )}`}>
         <div className='flex justify-end'>
@@ -73,7 +73,7 @@ export default function Card({
             alt='Rectangle animation'
           />
         </div>
-        <div className='flex gap-x-2'>
+        <div className='flex flex-col gap-x-2'>
           <div
             className={`flex w-[50px] h-[50px] justify-center items-center ${
               isRed ? 'bg-[#FFECEA]' : 'bg-[#D2FCFF]'

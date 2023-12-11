@@ -37,6 +37,9 @@
     -webkit-text-stroke: 4px transparent;
     color: white;
   }
+  .carousel-root {
+    @apply max-w-[300px];
+  }
   .portfolio_category-name > button:nth-child(1) {
     @apply capitalize;
   }

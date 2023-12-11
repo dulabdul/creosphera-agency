@@ -24,6 +24,7 @@ export default function Service() {
     <div className='w-full h-full overflow-hidden px-4 py-12'>
       <div className='container mx-auto'>
         <Heading
+          classNames='text-primary text-2xl md:text-4xl'
           title={'Layanan Kami'}
           description={'Solusi yang ditawarkan kami untuk bisnis anda'}
         />

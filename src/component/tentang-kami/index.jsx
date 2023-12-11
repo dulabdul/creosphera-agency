@@ -7,16 +7,19 @@ import CustomButton from '../Button';
 export default function TentangKami() {
   const data = [
     {
-      title: 'Intregritas',
-      description: 'bayar hanya saat click',
+      title: 'Inovasi Berkelanjutan:',
+      description:
+        'Kami terus mendorong batas-batas kreativitas untuk memberikan solusi digital terbaik',
     },
     {
-      title: 'Intregritas',
-      description: 'bayar hanya saat click',
+      title: 'Agile',
+      description:
+        'Dengan pendekatan Agile kami dapat beradaptasi dengan kebutuhan trend digital',
     },
     {
-      title: 'Intregritas',
-      description: 'bayar hanya saat click',
+      title: 'Kolaborasi Berorientasi Klien',
+      description:
+        'Kemitraan dengan klien adalah kunci. Kami mendengarkan, berkolaborasi, dan menghadirkan solusi yang sesuai dengan kebutuhan dan visi bisnis mereka.      ',
     },
   ];
   const dataService = [
@@ -26,7 +29,7 @@ export default function TentangKami() {
         {
           name: 'web development',
           description:
-            'Frontend development involves building the part of a website or application that users directly interact with, including the layout, design, and user interface. It plays a crucial role in providing a seamless and enjoyable user experience. Our frontend development service ensures that your website or application is visually appealing, intuitive, and easy to use, helping to attract and retain more customers.',
+            'Website kini diakses oleh seluruh orang di dunia, dengan menjajaki dunia digital bisnis Anda memungkinkan untuk diakses tanpa batasan tempat dan waktu. Pengembangan website yang dilakukan oleh tim kami berorientasi terhadap client dan berorientasi terhadap visi misi Anda',
         },
       ],
     },
@@ -36,7 +39,7 @@ export default function TentangKami() {
         {
           name: 'digital marketing',
           description:
-            'Frontend development involves building the part of a website or application that users directly interact with, including the layout, design, and user interface. It plays a crucial role in providing a seamless and enjoyable user experience. Our frontend development service ensures that your website or application is visually appealing, intuitive, and easy to use, helping to attract and retain more customers.',
+            'Dengan layanan digital marketing kami, khususnya melalui Google Ads, kami memastikan bisnis Anda tampil di puncak hasil pencarian, menjangkau audiens yang tepat, dan mengonversi peluang menjadi pelanggan setia. Jangan lewatkan kesempatan untuk mendominasi pangsa pasar digital Anda bersama kami.',
         },
       ],
     },
@@ -63,13 +66,12 @@ export default function TentangKami() {
             menjadi kebutuhan bagi bisnis.
           </p>
           <p className='text-tersier text-base tracking-wider'>
-            Dibikin.online adalah perusahaan pembuat website & Pakar SEO yang
-            didirikan oleh CV Orizin Ciptapedia. Misi kami adalah untuk mengubah
-            cara pandangan kamu tentang website. Kami memahami bahwa website
-            bukan hanya tentang tampilan yang menarik, tetapi juga tentang
-            fungsionalitas dan pengalaman pengguna yang baik. Oleh karena itu,
-            kami menawarkan solusi pembuatan website yang dapat memenuhi
-            kebutuhan bisnis kamu yang di optimalkan dengan SEO terbaik.
+            Kami di Creosphera adalah pionir dalam membawa bisnis Anda ke
+            peradaban digital. Dengan dedikasi penuh, kami menawarkan solusi
+            digital yang meliputi pembuatan website yang memukau dan strategi
+            iklan Google Ads yang efektif. Kami adalah mitra yang peduli dan
+            berkomitmen untuk mewujudkan keberhasilan bisnis Anda di dunia
+            digital.
           </p>
         </div>
         <div className='py-12 md:py-24 w-full grid grid-cols-1 md:grid-cols-3 gap-5 justify-center'>

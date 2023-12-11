@@ -7,6 +7,7 @@ export default function Portfolio() {
     <div className='w-full h-full py-12 px-4 overflow-hidden'>
       <div className='container mx-auto'>
         <Heading
+          classNames='text-primary text-2xl md:text-4xl'
           title='Portoflio Kami'
           description='Kami membuat ide anda menjadi nyata'
         />

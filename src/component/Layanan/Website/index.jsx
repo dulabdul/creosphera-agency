@@ -271,6 +271,7 @@ export default function Content() {
       {/* Start kenapa website content*/}
       <div>
         <Heading
+          classNames='text-primary text-2xl md:text-4xl'
           title='Kenapa Website'
           description='Website berkualitas, bisnis anda naik kelas'
         />
@@ -304,6 +305,7 @@ export default function Content() {
 
       <div className='py-12 md:py-24'>
         <Heading
+          classNames='text-primary text-2xl md:text-4xl'
           title='harga kami'
           description='Paket harga jasa pembuatan website'
         />

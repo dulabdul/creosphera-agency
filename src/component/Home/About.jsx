@@ -18,7 +18,7 @@ export default function About() {
           </div>
           <div className='w-full h-full flex gap-y-2 flex-col '>
             <h2 className='text-sekunder font-medium text-2xl'>Tentang Kami</h2>
-            <h3 className='text-primary font-semibold text-3xl leading-loose md:text-5xl'>
+            <h3 className='text-primary font-semibold text-3xl md:text-5xl'>
               Mengenal Kami Membuat Anda Percaya
             </h3>
             <p className='text-primary font-normal text-lg'>
