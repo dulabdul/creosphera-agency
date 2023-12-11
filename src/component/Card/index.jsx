@@ -4,11 +4,15 @@ import propTypes from 'prop-types';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
 import CustomButton from '../Button';
-import { FaHandHoldingDollar } from 'react-icons/fa6';
 export default function Card({
   isRed,
   isGreen,
   isCardSmall,
+  isPortofolio,
+  isPrice,
+  isPriceRed,
+  isPriceLight,
+  isCardContact,
   titleCardSmall,
   descriptionCardSmall,
   isHasLink,
@@ -16,13 +20,9 @@ export default function Card({
   className,
   title,
   description,
-  isPortofolio,
   hrefPortofolio,
   titlePortofolio,
   portofolioImageUrl,
-  isPrice,
-  isPriceRed,
-  isPriceLight,
   icons,
   price,
   suffixPrice,
@@ -201,6 +201,41 @@ export default function Card({
       );
     }
   }
+  if (isCardContact) {
+    return (
+      <div className='px-6 py-12 rounded-[30px] flex bg-gradient-to-r from-[#E9F7FF] via-[#FFDBD4] to-[#FFF3CA]'>
+        <div className='heading_content w-3/4'>
+          <h1 className=' text-2xl md:text-[42px] leading-snug font-medium text-[#5956E8]'>
+            Konsultasi gratis{' '}
+            <span className='text-2xl md:text-[42px] leading-snug font-medium text-primary'>
+              sekarang dan kembangkan bisnis anda
+            </span>
+          </h1>
+          <div className='py-8 md:py-16'>
+            <CustomButton
+              className='px-6 py-3 bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500'
+              isRounded
+              isHover
+              href='/'
+              isExternal
+              type='link'
+              target='_blank'>
+              Hubungi Kami
+            </CustomButton>
+          </div>
+        </div>
+        <div className='w-[25%] bg-[url("/images/cubic.png")] bg-cover bg-no-repeat bg-center'>
+          <Image
+            src={'/images/rocket.png'}
+            className='w-full'
+            alt='Rocket'
+            width={234}
+            height={352}
+          />
+        </div>
+      </div>
+    );
+  }
   return (
     <div
       className={`w-full relative flex flex-col shadow-lg rounded-3xl border transition-all duration-200 ease-linear px-6 py-16 ${
@@ -254,6 +289,7 @@ Card.propTypes = {
   isPrice: propTypes.bool,
   isPriceRed: propTypes.bool,
   isPriceLight: propTypes.bool,
+  isCardContact: propTypes.bool,
   icons: propTypes.node,
   portofolioImageUrl: propTypes.string.isRequired,
   titlePortofolio: propTypes.string.isRequired,
