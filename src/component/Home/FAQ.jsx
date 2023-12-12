@@ -54,7 +54,7 @@ export default function FAQ() {
     },
   ];
   return (
-    <div className='w-full h-full overflow-hidden py-12 md:py-16'>
+    <div className='w-full h-full overflow-hidden py-12 md:py-16 px-4'>
       <div className='container mx-auto'>
         <Heading
           classNames='text-primary text-2xl md:text-4xl'

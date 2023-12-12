@@ -15,6 +15,9 @@
       #f5f8ff 99.86%
     );
   }
+  .carousel-root {
+    @apply w-11/12 md:w-[64%] m-auto md:mt-[3%] !important;
+  }
 }
 @tailwind components;
 @tailwind utilities;
@@ -38,13 +41,10 @@
     color: white;
   }
   .carousel-root {
-    @apply max-w-[300px];
+    @apply max-w-[300px] !important;
   }
   .portfolio_category-name > button:nth-child(1) {
     @apply capitalize;
-  }
-  .carousel-root {
-    @apply w-11/12 md:w-[64%] m-auto md:mt-[3%] !important;
   }
 
   .carousel .slide {
