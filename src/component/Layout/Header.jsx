@@ -56,11 +56,7 @@ export default function Header() {
       route: '/tentang-kami',
       isDropdown: false,
     },
-    {
-      name: 'blog',
-      route: '/blog',
-      isDropdown: false,
-    },
+
     {
       name: 'kontak',
       route: '/kontak',
@@ -86,7 +82,7 @@ export default function Header() {
         <div className='flex md:order-2'>
           <CustomButton
             type='link'
-            href='/'
+            href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
             isExternal
             target='_blank'
             ariaLabel='Hubungi Kami'

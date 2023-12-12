@@ -48,7 +48,7 @@ export default function Testimonial() {
           </div>
           <div className='flex md:col-start-5 md:col-end-12'>
             <Carousel
-              className='max-w-[300px]'
+              className='max-w-[300px] md:max-w-none'
               showArrows={true}
               infiniteLoop={true}
               showThumbs={false}

@@ -20,7 +20,6 @@ export default function Card({
   className,
   title,
   description,
-  hrefPortofolio,
   titlePortofolio,
   portofolioImageUrl,
   icons,
@@ -46,7 +45,7 @@ export default function Card({
           isExternal
           type='link'
           target='_blank'
-          href={hrefPortofolio}>
+          href={href}>
           <Image
             src={portofolioImageUrl}
             width={375}
@@ -101,7 +100,10 @@ export default function Card({
   if (isPrice) {
     if (isPriceRed) {
       return (
-        <div className='bg-[url("/images/bg-card-price.svg")] bg-no-repeat bg-cover bg-center card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs shadow-lg shadow-redColor h-[1050px]'>
+        <div
+          className={`bg-[url("/images/bg-card-price.svg")] bg-no-repeat bg-cover bg-center card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-redColor max-w-xs shadow-lg  shadow-redColor ${classNames.join(
+            ''
+          )}`}>
           <div className='flex justify-end'>
             <div className='popular flex  rounded-full px-4 py-1 bg-[#C10A20]'>
               <p className='uppercase text-white text-[10px]'>most popular</p>
@@ -136,6 +138,11 @@ export default function Card({
             })}
             <CustomButton
               isRoundedFull
+              type='link'
+              href={href}
+              target='_blank'
+              isExternal
+              ariaLabel='Order Sekarang'
               isFlex
               isFull
               className='items-center justify-center px-4 py-2 font-semibold mt-4 bg-white hover:bg-gray-300 transition-all'>
@@ -147,7 +154,10 @@ export default function Card({
     }
     if (isPriceLight) {
       return (
-        <div className='card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-[#f6fffe] max-w-xs max-h-[1100px] border border-t-sekunder border-s-sekunder border-e-sekunder  border-b-white hover:border-b-sekunder h-[1050px]'>
+        <div
+          className={`card_price w-full px-4 pt-4 pb-6 rounded-[26px] bg-[#f6fffe] max-w-xs max-h-[1100px] border border-t-sekunder border-s-sekunder border-e-sekunder  border-b-white hover:border-b-sekunder ${classNames.join(
+            ''
+          )}`}>
           <div className='flex justify-end'>
             <Image
               src='/images/spinner.png'
@@ -190,6 +200,11 @@ export default function Card({
             <CustomButton
               isRoundedFull
               isFlex
+              type='link'
+              href={href}
+              target='_blank'
+              isExternal
+              ariaLabel='Order Sekarang'
               isFull
               isSecondary
               isSecondaryHover
@@ -216,7 +231,7 @@ export default function Card({
               className='px-6 py-3 bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500'
               isRounded
               isHover
-              href='/'
+              href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               isExternal
               type='link'
               target='_blank'>

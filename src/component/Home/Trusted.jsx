@@ -127,7 +127,7 @@ export default function Trusted() {
               isSecondaryHover
               type='link'
               ariaLabel='Hubungi Kami'
-              href='/'
+              href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               isFlex
               isRounded
               className='btn text-white max-w-[180px] flex items-center'>

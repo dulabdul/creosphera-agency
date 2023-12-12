@@ -15,10 +15,10 @@ export default function Footer() {
         name: 'web development',
         route: '/layanan/web-development',
       },
-      {
-        name: 'search engine optimization',
-        route: '/layanan/seo',
-      },
+      // {
+      //   name: 'search engine optimization',
+      //   route: '/layanan/seo',
+      // },
       {
         name: 'digital marketing',
         route: '/layanan/digital-marketing',
@@ -31,10 +31,10 @@ export default function Footer() {
         name: 'tentang',
         route: '/tentang-kami',
       },
-      {
-        name: 'blog',
-        route: '/blog',
-      },
+      // {
+      //   name: 'blog',
+      //   route: '/blog',
+      // },
       {
         name: 'kontak',
         route: '/kontak',
@@ -76,6 +76,7 @@ export default function Footer() {
             <CustomButton
               type='link'
               isExternal
+              href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               ariaLabel='Konsultasi Sekarang'
               isSecondary
               isSecondaryHover

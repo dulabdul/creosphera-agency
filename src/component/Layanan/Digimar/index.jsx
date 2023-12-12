@@ -40,100 +40,93 @@ export default function Marketing() {
   ];
   const dataPrice = [
     {
-      price: '1,5',
+      price: 299,
       suffix: 'ribu',
-      type: 'enterprise',
+      type: 'Essential',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20essential',
+
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
         {
-          name: 'all limited links',
+          name: 'Maksimal Budget Iklan 20K/Hari',
         },
         {
-          name: 'all limited links',
+          name: 'Include pajak iklan 11%',
         },
         {
-          name: 'all limited links',
+          name: 'Include setup google ads',
         },
         {
-          name: 'all limited links',
+          name: 'Konsultasi Konten dan target pasar',
         },
         {
-          name: 'all limited links',
+          name: 'Setup google analytics',
         },
         {
-          name: 'all limited links',
+          name: '2x report/week',
         },
         {
-          name: 'all limited links',
-        },
-        {
-          name: 'all limited links',
+          name: 'Durasi Iklan 7 Hari',
         },
       ],
     },
     {
-      price: '1,5',
+      price: 469,
       suffix: 'ribu',
-
-      type: 'enterprise',
+      type: 'Enterprise',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enterprise',
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
         {
-          name: 'all limited links',
+          name: 'Maksimal Budget Iklan 50K/Hari',
         },
         {
-          name: 'all limited links',
+          name: 'Include pajak iklan 11%',
         },
         {
-          name: 'all limited links',
+          name: 'Include setup google ads',
         },
         {
-          name: 'all limited links',
+          name: 'Konsultasi Konten dan target pasar',
         },
         {
-          name: 'all limited links',
+          name: 'Setup google analytics',
         },
         {
-          name: 'all limited links',
+          name: 'daily report',
         },
         {
-          name: 'all limited links',
-        },
-        {
-          name: 'all limited links',
+          name: 'Durasi Iklan 7 Hari',
         },
       ],
     },
     {
-      price: '1,5',
+      price: 329,
       suffix: 'ribu',
-
-      type: 'enterprise',
+      type: 'Enhanced',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enhanced',
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
         {
-          name: 'all limited links',
+          name: 'Maksimal Budget Iklan 40K/Hari',
         },
         {
-          name: 'all limited links',
+          name: 'Include pajak iklan 11%',
         },
         {
-          name: 'all limited links',
+          name: 'Include setup google ads',
         },
         {
-          name: 'all limited links',
+          name: 'Konsultasi Konten dan target pasar',
         },
         {
-          name: 'all limited links',
+          name: 'Setup google analytics',
         },
         {
-          name: 'all limited links',
+          name: '3x report/week',
         },
         {
-          name: 'all limited links',
-        },
-        {
-          name: 'all limited links',
+          name: 'Durasi Iklan 7 Hari',
         },
       ],
     },
@@ -193,7 +186,9 @@ export default function Marketing() {
             isSecondary
             isSecondaryHover
             isRounded
-            href='/'
+            isExternal
+            href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
+            target='_blank'
             isFlex
             className='text-white items-center justify-center px-4 py-2 max-w-[170px] my-4'>
             Order Sekarang
@@ -278,10 +273,12 @@ export default function Marketing() {
                 featurePrice={items.fitur}
                 isPriceLight
                 isPrice
+                href={items.url}
                 suffixPrice={items.suffix}
               />
             ) : (
               <Card
+                href={items.url}
                 price={items.price}
                 descriptionPrice={items.description}
                 typePrice={items.type}

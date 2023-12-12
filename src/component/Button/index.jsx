@@ -6,16 +6,15 @@ export default function CustomButton(props) {
   if (props.isWidthAuto) className.push('w-auto');
   if (props.isBlock) className.push('block');
   if (props.hasShadow) className.push('shadow-sm');
-  if (props.isPrimary) className.push('bg-sekunder shadow-lg shadow-sekunder');
+  if (props.isPrimary) className.push('bg-sekunder shadow-sekunder');
   if (props.isPrimaryHover)
     className.push(
-      'hover:bg-cyanColor hover:shadow-lg hover:shadow-cyanColor transition-all duration-200 ease-in'
+      'hover:bg-cyanColor hover:shadow-cyanColor transition-all duration-200 ease-in'
     );
-  if (props.isSecondary)
-    className.push('bg-cyanColor shadow-lg shadow-cyanColor');
+  if (props.isSecondary) className.push('bg-cyanColor shadow-cyanColor');
   if (props.isSecondaryHover)
     className.push(
-      'hover:bg-sekunder hover:shadow-lg hover:shadow-sekunder transition-all duration-200 ease-in'
+      'hover:bg-sekunder hover:shadow-sekunder transition-all duration-200 ease-in'
     );
   if (props.isRounded) className.push('rounded-[10px]');
   if (props.isRoundedFull) className.push('rounded-full');

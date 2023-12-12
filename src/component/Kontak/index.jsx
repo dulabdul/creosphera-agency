@@ -27,27 +27,10 @@ export default function ContactPage() {
                 <div className='flex flex-col'>
                   <CustomButton
                     isExternal
+                    target='_blank'
+                    ariaLabel='Telepon Sekarang'
                     type='link'
-                    href='/'>
-                    +6289675293838
-                  </CustomButton>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='my-8 md:my-16 p-6 max-w-[380px] md:min-w-[380px] h-full bg-gradient-to-br rounded-md from-[#FFE9E9] via-cyan-rgba to-[#FFF3CA]'>
-            <div className='bg-white rounded-lg max-w-[330px] md:min-w-[330px] p-6 flex flex-col'>
-              <div className='max-w-[150px] bg-[#FFDC60] px-4 py-1 rounded-full flex items-center justify-start'>
-                Telephone
-              </div>
-              <hr className='my-4' />
-              <div className='flex items-center gap-x-2'>
-                <FaWhatsapp className='text-2xl text-[#5956E8]' />
-                <div className='flex flex-col'>
-                  <CustomButton
-                    isExternal
-                    type='link'
-                    href='/'>
+                    href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'>
                     +6289675293838
                   </CustomButton>
                 </div>

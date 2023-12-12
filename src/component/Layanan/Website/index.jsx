@@ -56,6 +56,7 @@ export default function Content() {
       suffix: 'ribu',
       type: 'essential',
       description: 'cocok untuk landing page, portofolio, dan UMKM',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20essential',
       fitur: [
         {
           name: 'Sekali bayar, tanpa perpanjangan',
@@ -103,6 +104,8 @@ export default function Content() {
       price: 1.249,
       suffix: 'JT',
       type: 'enterprise',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enterprise',
+
       description:
         'cocok untuk website ecommerce kompleks, web traffic tinggi, dan bisnis profesional lainnya',
       fitur: [
@@ -172,6 +175,8 @@ export default function Content() {
       price: 749.0,
       suffix: 'ribu',
       type: 'Enhanced',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enhanced',
+
       description: 'cocok untuk ecommerce sederhana, blog',
       fitur: [
         {
@@ -260,9 +265,13 @@ export default function Content() {
           <CustomButton
             isSecondary
             isRounded
+            isExternal
+            target='_blank'
+            type='link'
+            href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
             isSecondaryHover
             isFlex
-            className='mt-2 px-4 py-2 text-white'>
+            className='mt-2 px-4 py-2 text-white max-w-[200px]'>
             Order Sekarang
           </CustomButton>
         </div>
@@ -313,21 +322,25 @@ export default function Content() {
           {dataPrice.map((items, index) => {
             return index % 2 === 0 ? (
               <Card
+                className='h-[1050px]'
                 price={items.price}
                 descriptionPrice={items.description}
                 typePrice={items.type}
                 featurePrice={items.fitur}
                 isPriceLight
                 isPrice
+                href={items.url}
                 suffixPrice={items.suffix}
               />
             ) : (
               <Card
+                className='h-[1050px]'
                 price={items.price}
                 descriptionPrice={items.description}
                 typePrice={items.type}
                 featurePrice={items.fitur}
                 isPrice
+                href={items.url}
                 suffixPrice={items.suffix}
                 isPriceRed
               />

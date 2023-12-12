@@ -157,7 +157,7 @@ export default function PortfolioCard() {
                 : item?.projects?.slice(0, 3).map((project) => (
                     <Card
                       key={project.id}
-                      hrefPortofolio={project.url}
+                      href={project.url}
                       isPortofolio
                       titlePortofolio={project.name}
                       portofolioImageUrl={project.imageUrl}
@@ -170,7 +170,7 @@ export default function PortfolioCard() {
                 : item?.projects?.map((project) => (
                     <Card
                       key={project.id}
-                      hrefPortofolio={project.url}
+                      href={project.url}
                       isPortofolio
                       titlePortofolio={project.name}
                       portofolioImageUrl={project.imageUrl}
