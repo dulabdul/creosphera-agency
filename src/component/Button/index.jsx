@@ -58,6 +58,7 @@ export default function CustomButton(props) {
     } else {
       return (
         <Link
+          aria-label={props.ariaLabel}
           href={props.href}
           className={className.join(' ')}
           style={props.style}>
@@ -83,6 +84,7 @@ export default function CustomButton(props) {
       className={className.join(' ')}
       style={props.style}
       value={props.value}
+      aria-label={props.ariaLabel}
       onClick={props.onClick}>
       {props.children}
     </button>
