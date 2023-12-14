@@ -14,7 +14,7 @@ export default function CustomButton(props) {
   if (props.isSecondary) className.push('bg-cyanColor shadow-cyanColor');
   if (props.isSecondaryHover)
     className.push(
-      'hover:bg-sekunder hover:shadow-sekunder transition-all duration-200 ease-in'
+      'hover:bg-sekunder hover:text-white hover:shadow-sekunder transition-all duration-200 ease-in'
     );
   if (props.isRounded) className.push('rounded-[10px]');
   if (props.isRoundedFull) className.push('rounded-full');

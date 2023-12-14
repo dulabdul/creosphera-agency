@@ -62,8 +62,8 @@ export default function Footer() {
         <Image
           alt='Spiral'
           src='/images/spiral_footer.png'
-          width={500}
-          height={500}
+          width={1080}
+          height={1245}
           className='w-full h-full'
         />
       </div>
@@ -82,7 +82,7 @@ export default function Footer() {
               isSecondaryHover
               isRounded
               isFlex
-              className='btn text-white max-w-[200px] items-center justify-center'>
+              className='btn text-primary max-w-[200px] items-center justify-center'>
               Konsultasi Sekarang
             </CustomButton>
           </div>
@@ -96,7 +96,7 @@ export default function Footer() {
                       type='link'
                       href={item.route}
                       ariaLabel={item.name}
-                      className='text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
+                      className='min-w-[48px] min-h-[48px] block text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
                       {item.name}
                     </CustomButton>
                   </li>
@@ -116,7 +116,7 @@ export default function Footer() {
                       target='_blank'
                       href={item.url}
                       ariaLabel={item.name}
-                      className='text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
+                      className='min-w-[48px] min-h-[48px] block text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
                       {item.name}
                     </CustomButton>
                   </li>
@@ -133,8 +133,8 @@ export default function Footer() {
                 <CustomButton
                   type='link'
                   href='/affiliate'
-                  ariaLabel='Menu Affiliate'
-                  className='text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
+                  ariaLabel='Buka Affiliate page'
+                  className='min-w-[48px] min-h-[48px] block text-primary font-normal text-base md:text-lg capitalize hover:text-redColor hover:underline transition-all duration-150'>
                   Program Reseller
                 </CustomButton>
               </li>

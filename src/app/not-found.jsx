@@ -21,6 +21,7 @@ export default function NotFound() {
         <CustomButton
           type='link'
           href='/'
+          ariaLabel='Kembali ke halaman utama'
           isSecondary
           isSecondaryHover
           isFlex

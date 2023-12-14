@@ -188,11 +188,12 @@ export default function Marketing() {
             isSecondary
             isSecondaryHover
             isRounded
+            ariaLabel='Hubungi kami untuk konsultasi'
             isExternal
             href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
             target='_blank'
             isFlex
-            className='text-white items-center justify-center px-4 py-2 max-w-[170px] my-4'>
+            className='text-primary items-center justify-center px-4 py-2 max-w-[170px] my-4'>
             Order Sekarang
           </CustomButton>
         </div>

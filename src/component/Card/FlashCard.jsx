@@ -11,6 +11,7 @@ export default function FlashCard({ type, content }) {
     <div className='flex relative flex-col lg:flex-row items-start md:items-center gap-x-2 py-8'>
       <CustomButton
         type='button'
+        ariaLabel='Open & Closed Flashcard'
         onClick={handleClickButton}
         className={`${
           isActive ? 'text-primary' : 'text-tersier font-light'

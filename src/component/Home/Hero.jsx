@@ -9,8 +9,8 @@ export default function Hero() {
         <Image
           alt='Spiral'
           src='/images/spiral_hero1.png'
-          width={500}
-          height={500}
+          width={1080}
+          height={1245}
           className='w-full h-full '
         />
       </div>
