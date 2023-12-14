@@ -267,7 +267,7 @@ export default function Card({
           <CustomButton
             className='text-start'
             type='button'
-            ariaLabel='Open & Closed Flashcard title'
+            ariaLabel='Open & Closed FAQ'
             onClick={() => handleAccordion(id)}>
             {title}
           </CustomButton>
@@ -275,7 +275,7 @@ export default function Card({
           <CustomButton
             className='flex justify-end h-[36px] w-[36px] items-center bg-cyanColor rounded-full px-2 py-1 transition-all duration-500'
             type='button'
-            ariaLabel='Open & Closed Flashcard title'
+            ariaLabel='Open & Closed FAQ'
             onClick={() => handleAccordion(id)}>
             <IoIosArrowDown
               className={`text-4xl text-white transition-all duration-500 ${
