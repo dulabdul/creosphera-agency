@@ -22,7 +22,7 @@ export default function Contact() {
               isRounded
               isFlex
               ariaLabel='Hubungi Kami'
-              className='btn text-white items-center justify-center max-w-[160px]'>
+              className='btn text-primary items-center justify-center max-w-[160px]'>
               Hubungi Kami
             </CustomButton>
           </div>

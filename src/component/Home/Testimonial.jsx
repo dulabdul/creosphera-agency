@@ -50,6 +50,7 @@ export default function Testimonial() {
             <Carousel
               className='max-w-[300px] md:max-w-none'
               showArrows={true}
+              ariaLabel='Prev & Next'
               infiniteLoop={true}
               showThumbs={false}
               showStatus={false}

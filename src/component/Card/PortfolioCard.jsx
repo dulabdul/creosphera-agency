@@ -25,7 +25,7 @@ export default function PortfolioCard() {
           },
           {
             id: 3,
-            title: 'Portofolio',
+            title: 'Portofolio project',
             url: 'https://ar-portofolio.my.id/',
             imageUrl: '/images/project/Portofolio.webp',
           },
@@ -44,7 +44,6 @@ export default function PortfolioCard() {
           {
             id: 6,
             title: 'Albar Tech CCTV',
-
             imageUrl: '/images/project/albartech.webp',
           },
         ],
@@ -122,6 +121,7 @@ export default function PortfolioCard() {
                 className='capitalize'
                 key={index}>
                 <button
+                  aria-label='Open Dropdown'
                   type='button'
                   value={item.name}
                   className='capitalize'
@@ -136,6 +136,7 @@ export default function PortfolioCard() {
             <div key={index}>
               <CustomButton
                 type='button'
+                ariaLabel='Change category'
                 value={item.name}
                 onClick={handleCategoryChange}
                 className={`text-primary font-medium text-base md:text-lg capitalize transition-all duration-200 ease-in hover:text-redColor ${
@@ -159,7 +160,7 @@ export default function PortfolioCard() {
                       key={project.id}
                       href={project.url}
                       isPortofolio
-                      titlePortofolio={project.name}
+                      titlePortofolio={project.title}
                       portofolioImageUrl={project.imageUrl}
                     />
                   ));
@@ -172,7 +173,7 @@ export default function PortfolioCard() {
                       key={project.id}
                       href={project.url}
                       isPortofolio
-                      titlePortofolio={project.name}
+                      titlePortofolio={project.title}
                       portofolioImageUrl={project.imageUrl}
                     />
                   ));
@@ -187,8 +188,8 @@ export default function PortfolioCard() {
             isSecondaryHover
             isRounded
             isFlex
-            ariaLabel='Button lihat semua portfolio'
-            className='btn text-white items-center max-w-[170px]'>
+            ariaLabel='Buka portofolio page'
+            className='btn text-primary items-center max-w-[170px]'>
             Lihat Semua
           </CustomButton>
         </div>
@@ -201,8 +202,8 @@ export default function PortfolioCard() {
             isSecondaryHover
             isRounded
             isFlex
-            ariaLabel='Button lihat semua portfolio'
-            className='btn text-white items-center max-w-[170px] invisible'>
+            ariaLabel='Buka Portofolio Page'
+            className='btn text-primary items-center max-w-[170px] invisible'>
             Lihat Semua
           </CustomButton>
         </div>

@@ -267,11 +267,12 @@ export default function Content() {
             isRounded
             isExternal
             target='_blank'
+            ariaLabel='Hubungi kami untuk konsultasi'
             type='link'
             href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
             isSecondaryHover
             isFlex
-            className='mt-2 px-4 py-2 text-white max-w-[200px]'>
+            className='mt-2 px-4 py-2 text-primary max-w-[200px]'>
             Order Sekarang
           </CustomButton>
         </div>

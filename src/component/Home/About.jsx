@@ -40,8 +40,8 @@ export default function About() {
               isSecondaryHover
               isRounded
               isFlex
-              ariaLabel='Selengkapnya Button'
-              className='btn text-white max-w-[180px] items-center'>
+              ariaLabel='Selengkapnya'
+              className='btn text-primary max-w-[180px] items-center'>
               Selengkapnya
             </CustomButton>
           </div>
