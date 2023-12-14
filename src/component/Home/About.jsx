@@ -9,7 +9,7 @@ export default function About() {
         <div className='grid gap-y-12 md:gap-x-4 md:gap-y-0 grid-cols-1 items-center md:grid-cols-2'>
           <div className='w-full h-full'>
             <Image
-              src='/images/people-about.png'
+              src='/images/people-about.webp'
               width={718}
               height={572}
               alt='Tentang Kami CreoSphera'

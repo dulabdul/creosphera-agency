@@ -44,6 +44,7 @@ export default function Hero() {
             src='/images/people_hero.png'
             width={500}
             height={700}
+            quality={50}
             alt='CreoSphera Hero'
             className='w-full h-full'
           />
