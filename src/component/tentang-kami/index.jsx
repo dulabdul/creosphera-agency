@@ -49,7 +49,7 @@ export default function TentangKami() {
       <div className='flex flex-wrap items-center '>
         <div className='w-full md:w-1/2 h-full'>
           <Image
-            src='/images/people-about.png'
+            src='/images/people-about.webp'
             width={718}
             height={572}
             alt='Tentang Kami CreoSphera'
