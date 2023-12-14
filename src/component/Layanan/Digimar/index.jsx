@@ -166,20 +166,22 @@ export default function Marketing() {
         </div>
         <div className='w-full md:w-1/2 flex flex-col'>
           <h1 className='text-primary text-2xl md:text-[42px] leading-relaxed font-medium'>
-            Tingkatkan Organik Trafik Hingga{' '}
-            <span className='text-cyanColor'>75.000 Klik</span>
+            Kenapa Harus <span className='text-cyanColor'>Google ADS?</span>
           </h1>
           <p className='text-primary text-base md:text-xl leading-relaxed font-normal'>
-            Search Engine Optimization adalah cara untuk meningkatkan kualitas
-            dan kuantitas kunjungan ke website Kamu melalui teknik-teknik
-            seperti pengoptimalan kata kunci, struktur situs web, konten yang
-            relevan dan berkualitas.
+            Google Ads adalah seperti kunci rahasia menuju pintu kesuksesan
+            online. Bayangkan ini sebagai cara untuk membuat brand Anda muncul
+            di layar orang-orang yang benar-benar mencari apa yang Anda
+            tawarkan. Ini adalah jalan cepat untuk dikenal, menjangkau pelanggan
+            potensial, dan melihat bisnis Anda tumbuh di platform online
+            terbesar di dunia, Google.
           </p>
           <p className='text-tersier text-base lg:text-lg leading-relaxed font-normal'>
-            Tujuannya untuk meningkatkan peringkat website Kamu pada mesin
-            pencari sehingga lebih mudah ditemukan oleh pengguna. Dengan
-            meningkatkan peringkat SEO, Kamu dapat meningkatkan jumlah
-            kunjungan, konversi, dan penjualan melalui website.
+            Iklan di Google Ads itu seperti membuka jendela besar ke dunia
+            online. Ini memberi kesempatan besar untuk dikenal oleh banyak orang
+            yang mungkin tertarik dengan produk atau layanan Anda. Dengan cara
+            ini, Anda bisa mengontrol iklan Anda, melacak kinerjanya, dan
+            mengarahkan pesan Anda tepat ke target pasar yang tepat.
           </p>
           <CustomButton
             type='link'

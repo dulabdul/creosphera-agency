@@ -4,6 +4,7 @@ import propTypes from 'prop-types';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
 import CustomButton from '../Button';
+import { IoIosArrowDown } from 'react-icons/io';
 export default function Card({
   isRed,
   isGreen,
@@ -13,6 +14,10 @@ export default function Card({
   isPriceRed,
   isPriceLight,
   isCardContact,
+  isFAQ,
+  id,
+  handleAccordion,
+  isActiveState,
   titleCardSmall,
   descriptionCardSmall,
   isHasLink,
@@ -251,6 +256,40 @@ export default function Card({
       </div>
     );
   }
+  if (isFAQ) {
+    return (
+      <div
+        className={`bg-white flex flex-col px-6 py-3 items-start justify-center rounded-2xl transition-all duration-500 `}>
+        <div className='w-full flex items-center justify-between'>
+          <CustomButton
+            className='text-start'
+            type='button'
+            onClick={() => handleAccordion(id)}>
+            {title}
+          </CustomButton>
+
+          <CustomButton
+            className='flex justify-end h-[36px] w-[36px] items-center bg-cyanColor rounded-full px-2 py-1 transition-all duration-500'
+            type='button'
+            onClick={() => handleAccordion(id)}>
+            <IoIosArrowDown
+              className={`text-4xl text-white transition-all duration-500 ${
+                isActiveState === id ? '-rotate-180' : ''
+              }`}
+            />
+          </CustomButton>
+        </div>
+        <div
+          className={`${
+            isActiveState === id
+              ? 'opacity-100 h-auto my-4'
+              : 'opacity-0 h-0 overflow-hidden'
+          } transition-all duration-[400] ease-in-out `}>
+          <p>{description}</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div
       className={`w-full relative flex flex-col shadow-lg rounded-3xl border transition-all duration-200 ease-linear px-6 py-16 ${
@@ -305,8 +344,10 @@ Card.propTypes = {
   isPriceRed: propTypes.bool,
   isPriceLight: propTypes.bool,
   isCardContact: propTypes.bool,
+  isFAQ: propTypes.bool,
+  handleAccordion: propTypes.func,
   icons: propTypes.node,
-  portofolioImageUrl: propTypes.string.isRequired,
+  portofolioImageUrl: propTypes.string,
   titlePortofolio: propTypes.string.isRequired,
   href: propTypes.string,
   className: propTypes.string,

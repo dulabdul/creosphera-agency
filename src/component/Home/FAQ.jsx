@@ -2,11 +2,9 @@
 import React, { useState } from 'react';
 import Heading from '../Heading';
 import Image from 'next/image';
-import CustomButton from '../Button';
-import { IoIosArrowDown } from 'react-icons/io';
+import Card from '../Card';
 export default function FAQ() {
   const [isActive, setIsActive] = useState(null);
-  console.log(isActive);
   const handleAccordion = (index) => {
     if (isActive === index) {
       setIsActive(null);
@@ -52,6 +50,11 @@ export default function FAQ() {
       content:
         'Jika anda sudah mempunyai keduanya atau salah satunya, Anda bisa langsung menghubungi kami dan akan kami berikan harga yang berbeda dari harga paket kami',
     },
+    {
+      title: 'Apakah ada jaminan produk terjual?',
+      content:
+        'Perlu Anda ketahui, faktor yang bisa mempengaruhi sebuah produk bisa terjual atau tidak ada banyak. Google Ads hanya menjembatani customer potensial dengan produk yang Anda miliki. Semua transaksi juga bergantung pada tampilan website atau landing page milik Anda, kemampuan sales dalam menawarkan produk yang Anda jual dan yang lainnya. Jadi, Google Ads bukan “penentu” utama sebuah produk bisa terjual ataupun tidak.',
+    },
   ];
   return (
     <div className='w-full h-full overflow-hidden py-12 md:py-16 px-4'>
@@ -65,37 +68,15 @@ export default function FAQ() {
           <div className='flex flex-col gap-y-5'>
             {data.map((item, index) => {
               return (
-                <div
+                <Card
+                  isActiveState={isActive}
+                  isFAQ
+                  id={index}
+                  handleAccordion={handleAccordion}
+                  title={item.title}
+                  description={item.content}
                   key={index}
-                  className={`bg-white flex flex-col px-6 py-3 items-start justify-center rounded-2xl transition-all duration-500 `}>
-                  <div className='w-full flex items-center justify-between'>
-                    <CustomButton
-                      className='text-start'
-                      type='button'
-                      onClick={() => handleAccordion(index)}>
-                      {item.title}
-                    </CustomButton>
-
-                    <CustomButton
-                      className='flex justify-end h-[36px] w-[36px] items-center bg-cyanColor rounded-full px-2 py-1 transition-all duration-500'
-                      type='button'
-                      onClick={() => handleAccordion(index)}>
-                      <IoIosArrowDown
-                        className={`text-4xl text-white transition-all duration-500 ${
-                          isActive === index ? '-rotate-180' : ''
-                        }`}
-                      />
-                    </CustomButton>
-                  </div>
-                  <div
-                    className={`${
-                      isActive === index
-                        ? 'opacity-100 h-auto my-4'
-                        : 'opacity-0 h-0 overflow-hidden'
-                    } transition-all duration-[400] ease-in-out `}>
-                    <p>{item.content}</p>
-                  </div>
-                </div>
+                />
               );
             })}
           </div>
