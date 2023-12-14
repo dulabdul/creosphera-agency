@@ -1,8 +1,10 @@
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';
-
+import { usePathname } from 'next/navigation';
 export default function Footer() {
+  const pathName = usePathname();
   const menuData = {
     menu: [
       {
@@ -13,10 +15,10 @@ export default function Footer() {
         name: 'web development',
         route: '/layanan/web-development',
       },
-      {
-        name: 'search engine optimization',
-        route: '/layanan/seo',
-      },
+      // {
+      //   name: 'search engine optimization',
+      //   route: '/layanan/seo',
+      // },
       {
         name: 'digital marketing',
         route: '/layanan/digital-marketing',
@@ -29,10 +31,10 @@ export default function Footer() {
         name: 'tentang',
         route: '/tentang-kami',
       },
-      {
-        name: 'blog',
-        route: '/blog',
-      },
+      // {
+      //   name: 'blog',
+      //   route: '/blog',
+      // },
       {
         name: 'kontak',
         route: '/kontak',
@@ -50,7 +52,12 @@ export default function Footer() {
     ],
   };
   return (
-    <section className='w-full h-full overflow-hidden'>
+    <footer
+      className={`w-full h-full overflow-hidden ${
+        pathName === '/'
+          ? ''
+          : 'bg-[url(/images/bg-wave-footer.svg)] bg-no-repeat bg-cover'
+      }`}>
       <div className='z-10 w-full h-[80vh] absolute'>
         <Image
           alt='Spiral'
@@ -69,6 +76,7 @@ export default function Footer() {
             <CustomButton
               type='link'
               isExternal
+              href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               ariaLabel='Konsultasi Sekarang'
               isSecondary
               isSecondaryHover
@@ -134,6 +142,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

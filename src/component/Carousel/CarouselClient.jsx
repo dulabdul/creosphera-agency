@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import style from './carousel.module.css';
 import 'react-multi-carousel/lib/styles.css';
 export default function CarouselSlider() {
   const responsive = {

@@ -4,7 +4,7 @@ import CustomButton from '../Button';
 
 export default function About() {
   return (
-    <section className='w-full h-full ovefflow-hidden px-4 py-12'>
+    <div className='w-full h-full ovefflow-hidden px-4 py-12'>
       <div className='container mx-auto'>
         <div className='grid gap-y-12 md:gap-x-4 md:gap-y-0 grid-cols-1 items-center md:grid-cols-2'>
           <div className='w-full h-full'>
@@ -25,7 +25,7 @@ export default function About() {
               CreoSphera telah membantu banyak perusahaan dan perorangan dalam
               mencapai tujuan finansial dan branding mereka.
             </p>
-            <p className='text-tersier text-base tracking-wider'>
+            <p className='text-tersier text-base tracking-wider leading-relaxed'>
               Kami menawarkan berbagai jenis website, mulai dari website
               perusahaan, toko online, blog, hingga website pribadi. Semua
               website yang kami buat dilengkapi dengan tampilan yang menarik,
@@ -35,7 +35,7 @@ export default function About() {
             </p>
             <CustomButton
               type='link'
-              href='/'
+              href='/tentang-kami'
               isSecondary
               isSecondaryHover
               isRounded
@@ -47,6 +47,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import CustomButton from '../Button';
 
 export default function Hero() {
   return (
-    <section className='w-full h-full overflow-hidden'>
+    <div className='w-full h-full pt-16 overflow-hidden'>
       <div className='z-10 w-full h-full absolute'>
         <Image
           alt='Spiral'
@@ -49,6 +49,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 }

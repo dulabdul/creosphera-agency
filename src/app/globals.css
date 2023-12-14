@@ -1,6 +1,12 @@
 @tailwind base;
 @layer base {
   body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+  }
+  .bg-gradient {
     background: linear-gradient(
       90deg,
       #e5fff3 0%,
@@ -8,6 +14,9 @@
       #fff3f3 54.58%,
       #f5f8ff 99.86%
     );
+  }
+  .carousel-root {
+    @apply w-11/12 md:w-[64%] m-auto md:mt-[3%] !important;
   }
 }
 @tailwind components;
@@ -31,11 +40,11 @@
     -webkit-text-stroke: 4px transparent;
     color: white;
   }
+  .carousel-root {
+    @apply max-w-[300px] !important;
+  }
   .portfolio_category-name > button:nth-child(1) {
     @apply capitalize;
-  }
-  .carousel-root {
-    @apply w-11/12 md:w-[64%] m-auto md:mt-[3%] !important;
   }
 
   .carousel .slide {
@@ -69,5 +78,11 @@
   }
   .accordion_faq button {
     @apply focus:ring-0 hover:rounded-[32px];
+  }
+  .scrolled {
+    transition: all 0.3s linear;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
+    @apply shadow-md shadow-indigo-200/10;
   }
 }

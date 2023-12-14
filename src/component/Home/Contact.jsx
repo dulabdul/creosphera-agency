@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
 import CustomButton from '../Button';
 
 export default function Contact() {
   return (
-    <section className='w-full h-full overflow-hidden py-12 md:pt-24 pb-0 px-4'>
+    <div className='w-full h-full overflow-hidden py-12 md:pt-24 pb-0 px-4'>
       <div className='container mx-auto'>
         <div className='flex flex-wrap md:flex-nowrap items-center'>
           <div className='flex flex-col gap-y-8'>
@@ -17,7 +16,7 @@ export default function Contact() {
             <CustomButton
               type='link'
               isExternal
-              href='/'
+              href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               isSecondary
               isSecondaryHover
               isRounded
@@ -38,6 +37,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

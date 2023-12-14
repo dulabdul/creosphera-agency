@@ -7,10 +7,7 @@ import Portfolio from '@/component/Home/Portfolio';
 import Service from '@/component/Home/Service';
 import Testimonial from '@/component/Home/Testimonial';
 import Trusted from '@/component/Home/Trusted';
-import { usePathname } from 'next/navigation';
 export default function Home() {
-  const path = usePathname();
-  console.log(path);
   return (
     <>
       <Hero />
