@@ -41,10 +41,9 @@ export default function Hero() {
         </div>
         <div className='w-full xl:w-[40%]'>
           <Image
-            src='/images/people_hero.png'
+            src='/images/people_hero.webp'
             width={500}
             height={700}
-            quality={50}
             alt='CreoSphera Hero'
             className='w-full h-full'
           />
