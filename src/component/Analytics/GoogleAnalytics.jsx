@@ -1,4 +1,3 @@
-'use client';
 import Script from 'next/script';
 export default function GoogleAnalyticsTracking({ GA_TRACKING_ID }) {
   return (

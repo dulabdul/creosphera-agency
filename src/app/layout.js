@@ -1,7 +1,8 @@
 import Body from '@/component/Layout/Body';
 import './globals.css';
 import localFont from 'next/font/local';
-import GoogleAnalyticsTracking from '@/component/GoogleAnalytics';
+import GoogleAnalyticsTracking from '@/component/Analytics/GoogleAnalytics';
+import GoogleTagManager from '@/component/Analytics/GoogleTagManager';
 // Font files can be colocated inside of `app`
 
 export const metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
       <GoogleAnalyticsTracking
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
       />
+      <GoogleTagManager G_TAG_MANAGER_ID={process.env.NEXT_PUBLIC_GTM} />
       <Body font={proximaNova}>{children}</Body>
     </html>
   );
