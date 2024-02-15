@@ -1,11 +1,16 @@
 import Body from '@/component/Layout/Body';
 import './globals.css';
 import localFont from 'next/font/local';
+import GoogleAnalyticsTracking from '@/component/GoogleAnalytics';
 // Font files can be colocated inside of `app`
 
 export const metadata = {
+  robots: { index: false, follow: false },
   title: 'CreoSphera',
   description: 'Kembangkan bisnis anda dengan creosphera',
+  verification: {
+    google: 'Rh6bVWGaBmXAAgMmhmcD8qvcrES2la_TVg0TwogVuvs',
+  },
 };
 const proximaNova = localFont({
   src: [
@@ -35,6 +40,9 @@ const proximaNova = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <GoogleAnalyticsTracking
+        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+      />
       <Body font={proximaNova}>{children}</Body>
     </html>
   );

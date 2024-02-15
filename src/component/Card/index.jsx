@@ -34,7 +34,6 @@ export default function Card({
   typePrice,
   featurePrice,
 }) {
-  console.log(titlePortofolio);
   const classNames = [className];
   if (isRed)
     classNames.push(
