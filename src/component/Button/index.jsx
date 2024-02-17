@@ -45,6 +45,7 @@ export default function CustomButton(props) {
     if (props.isExternal) {
       return (
         <a
+          id={props.id}
           aria-label={props.ariaLabel}
           onClick={props.onClick}
           href={props.href}
@@ -58,6 +59,7 @@ export default function CustomButton(props) {
     } else {
       return (
         <Link
+          id={props.id}
           aria-label={props.ariaLabel}
           href={props.href}
           className={className.join(' ')}
@@ -81,6 +83,7 @@ export default function CustomButton(props) {
 
   return (
     <button
+      id={props.id}
       className={className.join(' ')}
       style={props.style}
       value={props.value}
@@ -101,7 +104,7 @@ CustomButton.propTypes = {
   isLoading: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isWidthAuto: PropTypes.bool,
-
+  id: PropTypes.string,
   isLight: PropTypes.bool,
   isBlock: PropTypes.bool,
   isFlex: PropTypes.bool,
