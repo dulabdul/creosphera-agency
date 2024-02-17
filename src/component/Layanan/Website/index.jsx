@@ -78,7 +78,7 @@ export default function Content() {
           name: 'termasuk hosting',
         },
         {
-          name: 'full akses login cms dan cpanel',
+          name: 'full akses login wordpress',
         },
         {
           name: 'fitur chat whatsapp',
@@ -130,7 +130,7 @@ export default function Content() {
           name: 'termasuk hosting',
         },
         {
-          name: 'full akses login cms dan cpanel',
+          name: 'full akses login wordpress',
         },
         {
           name: 'fitur chat whatsapp',
@@ -201,7 +201,7 @@ export default function Content() {
           name: 'termasuk hosting',
         },
         {
-          name: 'full akses login cms dan cpanel',
+          name: 'full akses login wordpress',
         },
         {
           name: 'fitur chat whatsapp',
