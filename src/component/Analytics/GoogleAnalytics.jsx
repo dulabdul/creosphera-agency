@@ -14,7 +14,7 @@ export default function GoogleAnalyticsTracking({ GA_TRACKING_ID }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${GA_TRACKING_ID}');
+          gtag('config', ${GA_TRACKING_ID});
         `}
       </Script>
     </>
