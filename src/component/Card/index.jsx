@@ -25,6 +25,7 @@ export default function Card({
   className,
   title,
   description,
+  serviceParent,
   titlePortofolio,
   portofolioImageUrl,
   icons,
@@ -47,6 +48,7 @@ export default function Card({
     return (
       <div className='max-w-[375px] max-h-[275px] overflow-hidden transition-all duration-200 hover:scale-105'>
         <CustomButton
+          id={titlePortofolio}
           isExternal
           type='link'
           ariaLabel=''
@@ -151,6 +153,7 @@ export default function Card({
               ariaLabel='Order Sekarang'
               isFlex
               isFull
+              id={`layanan ${serviceParent} ${typePrice}`}
               className='items-center justify-center px-4 py-2 font-semibold mt-4 bg-white hover:bg-gray-300 transition-all'>
               Pilih Paket
             </CustomButton>
@@ -213,6 +216,7 @@ export default function Card({
               ariaLabel='Order Sekarang'
               isFull
               isSecondary
+              id={`layanan ${serviceParent} ${typePrice}`}
               isSecondaryHover
               className='items-center justify-center text-primary px-4 py-2 font-semibold mt-4'>
               Pilih Paket
@@ -234,6 +238,7 @@ export default function Card({
           </h1>
           <div className='py-8 md:py-16'>
             <CustomButton
+              id='hubungi kami'
               className='px-6 py-3 bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500'
               isRounded
               ariaLabel='Hubungi kami untuk konsultasi'
@@ -324,6 +329,7 @@ export default function Card({
         </p>
         {isHasLink ? (
           <Link
+            id={title}
             href={href}
             className={`${
               isRed ? 'text-redColor' : 'text-cyanColor'
@@ -352,7 +358,7 @@ Card.propTypes = {
   handleAccordion: propTypes.func,
   icons: propTypes.node,
   portofolioImageUrl: propTypes.string,
-  titlePortofolio: propTypes.string.isRequired,
+  titlePortofolio: propTypes.string,
   href: propTypes.string,
   className: propTypes.string,
   title: propTypes.string,
