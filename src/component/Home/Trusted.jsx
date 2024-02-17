@@ -6,7 +6,7 @@ import { FaHandHoldingDollar } from 'react-icons/fa6';
 import { BiSupport } from 'react-icons/bi';
 import { DiResponsive } from 'react-icons/di';
 import { MdOutlineSecurity } from 'react-icons/md';
-export default function Trusted() {
+export default function Trusted({ exploreRef }) {
   const list = [
     {
       text: 'Pengerjaan Cepat.',
@@ -57,17 +57,10 @@ export default function Trusted() {
     },
   ];
   return (
-    <div className='w-full h-full overflow-hidden px-4 py-16 md:py-24'>
+    <div
+      ref={exploreRef}
+      className='w-full h-full overflow-hidden px-4 py-16 md:py-24'>
       <div className='container mx-auto'>
-        {/* <div className='mb-10 md:mb-6'>
-          <h2 className='text-sekunder font-medium text-[42px] text-center'>
-            Trusted By
-          </h2>
-          <p className='text-primary font-normal text-base text-center'>
-            Dipercaya oleh puluhan perusahaan ternama
-          </p>
-        </div>
-        <CarouselSlider /> */}
         <div className='grid gap-x-6 gap-y-16 md:gap-y-0 grid-cols-1 items-center md:grid-cols-12 pt-12 pb-6'>
           <div className='flex flex-col md:col-start-1 md:col-end-7'>
             <h2 className='text-primary font-medium text-3xl md:text-4xl'>
@@ -127,6 +120,7 @@ export default function Trusted() {
               isSecondaryHover
               type='link'
               ariaLabel='Hubungi Kami'
+              id='hubungi kami'
               href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               isFlex
               isRounded

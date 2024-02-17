@@ -2,7 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../Button';
 
-export default function Hero() {
+export default function Hero({ exploreRef }) {
+  const handlerScroll = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop - 50,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className='w-full h-full pt-16 overflow-hidden'>
       <div className='z-10 w-full h-full absolute'>
@@ -29,7 +35,9 @@ export default function Hero() {
               dikelola oleh profesional
             </p>
             <CustomButton
+              onClick={() => handlerScroll(exploreRef.current)}
               type='button'
+              id='scroll-down'
               ariaLabel='Explore sekarang'
               isPrimary
               isPrimaryHover
