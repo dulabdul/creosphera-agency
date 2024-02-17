@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
       <GoogleAnalyticsTracking
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
       />
-      {/* <GoogleTagManager G_TAG_MANAGER_ID={process.env.NEXT_PUBLIC_GTM} /> */}
+      <GoogleTagManager G_TAG_MANAGER_ID={process.env.NEXT_PUBLIC_GTM} />
       <Body font={proximaNova}>{children}</Body>
     </html>
   );
