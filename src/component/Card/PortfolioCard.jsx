@@ -185,6 +185,7 @@ export default function PortfolioCard() {
             type='link'
             href='/portofolio'
             isSecondary
+            id='open portofolio'
             isSecondaryHover
             isRounded
             isFlex
@@ -200,6 +201,7 @@ export default function PortfolioCard() {
             href='/portofolio'
             isSecondary
             isSecondaryHover
+            id='open portofolio'
             isRounded
             isFlex
             ariaLabel='Buka Portofolio Page'

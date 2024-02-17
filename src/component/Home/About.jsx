@@ -38,6 +38,7 @@ export default function About() {
               href='/tentang-kami'
               isSecondary
               isSecondaryHover
+              id='selengkapnya'
               isRounded
               isFlex
               ariaLabel='Selengkapnya'

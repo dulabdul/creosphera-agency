@@ -15,6 +15,7 @@ export default function Contact() {
             </p>
             <CustomButton
               type='link'
+              id='hubungi kami'
               isExternal
               href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
               isSecondary

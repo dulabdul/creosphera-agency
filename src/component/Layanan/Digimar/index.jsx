@@ -42,9 +42,9 @@ export default function Marketing() {
     {
       price: 299,
       suffix: 'ribu',
-      type: 'Essential',
+      serviceParent: 'digital marketing',
+      type: 'essential',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20essential',
-
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
         {
@@ -73,7 +73,8 @@ export default function Marketing() {
     {
       price: 469,
       suffix: 'ribu',
-      type: 'Enterprise',
+      serviceParent: 'digital marketing',
+      type: 'enterprise',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enterprise',
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
@@ -103,7 +104,8 @@ export default function Marketing() {
     {
       price: 329,
       suffix: 'ribu',
-      type: 'Enhanced',
+      serviceParent: 'digital marketing',
+      type: 'enhanced',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enhanced',
       description: 'cocok untuk website ecommerce, web traffic tinggi',
       fitur: [
@@ -188,6 +190,7 @@ export default function Marketing() {
             isSecondary
             isSecondaryHover
             isRounded
+            id='hubungi kami'
             ariaLabel='Hubungi kami untuk konsultasi'
             isExternal
             href='https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi'
@@ -275,6 +278,7 @@ export default function Marketing() {
                 typePrice={items.type}
                 featurePrice={items.fitur}
                 isPriceLight
+                serviceParent={items.serviceParent}
                 isPrice
                 href={items.url}
                 suffixPrice={items.suffix}
@@ -283,6 +287,7 @@ export default function Marketing() {
               <Card
                 href={items.url}
                 price={items.price}
+                serviceParent={items.serviceParent}
                 descriptionPrice={items.description}
                 typePrice={items.type}
                 featurePrice={items.fitur}

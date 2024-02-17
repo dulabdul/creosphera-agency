@@ -53,6 +53,7 @@ export default function Content() {
   const dataPrice = [
     {
       price: 599.0,
+      serviceParent: 'webdev',
       suffix: 'ribu',
       type: 'essential',
       description: 'cocok untuk landing page, portofolio, dan UMKM',
@@ -103,6 +104,7 @@ export default function Content() {
     {
       price: 1.249,
       suffix: 'JT',
+      serviceParent: 'webdev',
       type: 'enterprise',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enterprise',
 
@@ -174,7 +176,8 @@ export default function Content() {
     {
       price: 749.0,
       suffix: 'ribu',
-      type: 'Enhanced',
+      serviceParent: 'webdev',
+      type: 'enhanced',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enhanced',
 
       description: 'cocok untuk ecommerce sederhana, blog',
@@ -265,6 +268,7 @@ export default function Content() {
           <CustomButton
             isSecondary
             isRounded
+            id='hubungi kami'
             isExternal
             target='_blank'
             ariaLabel='Hubungi kami untuk konsultasi'
@@ -330,12 +334,14 @@ export default function Content() {
                 featurePrice={items.fitur}
                 isPriceLight
                 isPrice
+                serviceParent={items.serviceParent}
                 href={items.url}
                 suffixPrice={items.suffix}
               />
             ) : (
               <Card
                 className='h-[1050px]'
+                serviceParent={items.serviceParent}
                 price={items.price}
                 descriptionPrice={items.description}
                 typePrice={items.type}

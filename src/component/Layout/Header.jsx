@@ -87,6 +87,7 @@ export default function Header() {
             target='_blank'
             ariaLabel='Hubungi Kami'
             isPrimary
+            id='hubungi kami'
             isPrimaryHover
             isRoundedFull
             className='btn text-white cursor-pointer w-1/2 sm:w-full mt-2 hidden md:block'>
@@ -109,7 +110,8 @@ export default function Header() {
                     {menu.dropdown.map((item, index) => {
                       return (
                         <Link
-                          className='flex flex-col px-4 py-2'
+                          id={item.dropdownName}
+                          className={`flex flex-col px-4 py-2`}
                           href={item.route}
                           key={index}>
                           {item.dropdownName}
@@ -118,7 +120,11 @@ export default function Header() {
                     })}
                   </Dropdown>
                 ) : (
-                  <Link href={menu.route}>{menu.name}</Link>
+                  <Link
+                    id={menu.name}
+                    href={menu.route}>
+                    {menu.name}
+                  </Link>
                 )}
               </li>
             );
