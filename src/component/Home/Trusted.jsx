@@ -132,6 +132,7 @@ export default function Trusted({ exploreRef }) {
             {cardList.map((item, index) => {
               return index % 2 === 0 ? (
                 <Card
+                  key={index}
                   className={`max-w-[285px] max-h-[335px] md:max-h-[400px] ${
                     index === 2 ? 'md:row-start-3 md:col-start-2' : ''
                   }`}
@@ -142,6 +143,7 @@ export default function Trusted({ exploreRef }) {
                 />
               ) : (
                 <Card
+                  key={index}
                   className={`max-w-[285px] max-h-[335px]  md:max-h-[400px] ${
                     index == 3 ? 'md:row-start-2' : ''
                   } ${index == 1 ? 'md:row-start-2 ' : ''}`}

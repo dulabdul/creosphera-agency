@@ -10,12 +10,6 @@ export default function Header() {
   const path = usePathname();
   const [scrolledNav, setScrolledNav] = useState(null);
 
-  const handlerScroll = (ref) => {
-    window.scrollTo({
-      top: ref.offsetTop - 50,
-      behavior: 'smooth',
-    });
-  };
   const listenScrollEvent = () => {
     window.scrollY > 20 ? setScrolledNav('scrolled') : setScrolledNav('');
   };

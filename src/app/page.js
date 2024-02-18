@@ -8,6 +8,7 @@ import Service from '@/component/Home/Service';
 import Testimonial from '@/component/Home/Testimonial';
 import Trusted from '@/component/Home/Trusted';
 import { useRef } from 'react';
+
 export default function Home() {
   const exploreRef = useRef(null);
   return (
