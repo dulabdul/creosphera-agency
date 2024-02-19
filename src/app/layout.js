@@ -8,11 +8,11 @@ import GoogleTagManager from '@/component/Analytics/GoogleTagManager';
 export const metadata = {
   description: 'Kembangkan bisnis anda dengan creosphera',
   robots: {
-    index: true,
+    index: false,
     follow: true,
     nocache: true,
     googleBot: {
-      index: true,
+      index: false,
       follow: true,
       noimageindex: true,
       'max-video-preview': -1,
