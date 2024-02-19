@@ -84,7 +84,7 @@ export default function Content() {
           name: 'fitur chat whatsapp',
         },
         {
-          name: 'revisi 2x',
+          name: 'Unlimited Revisi',
         },
         {
           name: 'security SSL + HTTPS',
@@ -157,7 +157,7 @@ export default function Content() {
           name: 'SEO Optimisasi',
         },
         {
-          name: 'revisi 5x',
+          name: 'Unlimited Revisi',
         },
         {
           name: 'security SSL + HTTPS',
@@ -219,7 +219,7 @@ export default function Content() {
           name: 'catalog product',
         },
         {
-          name: 'revisi 3x',
+          name: 'Unlimited Revisi',
         },
         {
           name: 'security SSL + HTTPS',
