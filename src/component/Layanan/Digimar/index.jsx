@@ -40,7 +40,7 @@ export default function Marketing() {
   ];
   const dataPrice = [
     {
-      price: 299,
+      price: 399,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'essential',
@@ -48,7 +48,7 @@ export default function Marketing() {
       description: '',
       fitur: [
         {
-          name: 'Maksimal Budget Iklan 20K/Hari',
+          name: 'Maksimal Budget Iklan 40K/Hari',
         },
         {
           name: 'Include pajak iklan 11%',
@@ -71,7 +71,7 @@ export default function Marketing() {
       ],
     },
     {
-      price: 469,
+      price: 979,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'enterprise',
@@ -102,7 +102,7 @@ export default function Marketing() {
       ],
     },
     {
-      price: 329,
+      price: 499,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'enhanced',
@@ -110,7 +110,7 @@ export default function Marketing() {
       description: '',
       fitur: [
         {
-          name: 'Maksimal Budget Iklan 40K/Hari',
+          name: 'Maksimal Budget Iklan 50K/Hari',
         },
         {
           name: 'Include pajak iklan 11%',
@@ -125,7 +125,7 @@ export default function Marketing() {
           name: 'Setup google analytics',
         },
         {
-          name: '3x report/week',
+          name: '4x report/week',
         },
         {
           name: 'Durasi Iklan 7 Hari',
