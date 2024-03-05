@@ -1,10 +1,75 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import propTypes from 'prop-types';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
 import CustomButton from '../Button';
 import { IoIosArrowDown } from 'react-icons/io';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
+import {
+  isImageFitCover,
+  isImageSlide,
+  useLightboxProps,
+  useLightboxState,
+} from 'yet-another-react-lightbox';
+
+function isNextJsImage(slide) {
+  return (
+    isImageSlide(slide) &&
+    typeof slide.width === 'number' &&
+    typeof slide.height === 'number'
+  );
+}
+
+function NextJsImage({ slide, offset, rect }) {
+  const {
+    on: { click },
+    carousel: { imageFit },
+  } = useLightboxProps();
+
+  const { currentIndex } = useLightboxState();
+
+  const cover = isImageSlide(slide) && isImageFitCover(slide, imageFit);
+
+  if (!isNextJsImage(slide)) return undefined;
+
+  const width = !cover
+    ? Math.round(
+        Math.min(rect.width, (rect.height / slide.height) * slide.width)
+      )
+    : rect.width;
+
+  const height = !cover
+    ? Math.round(
+        Math.min(rect.height, (rect.width / slide.width) * slide.height)
+      )
+    : rect.height;
+
+  return (
+    <div style={{ position: 'relative', width, height }}>
+      <Image
+        fill
+        alt=''
+        src={slide}
+        loading='eager'
+        draggable={false}
+        placeholder={slide.blurDataURL ? 'blur' : undefined}
+        style={{
+          objectFit: cover ? 'cover' : 'contain',
+          cursor: click ? 'pointer' : undefined,
+        }}
+        sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
+        onClick={
+          offset === 0 ? () => click?.({ index: currentIndex }) : undefined
+        }
+      />
+    </div>
+  );
+}
 export default function Card({
   isRed,
   isGreen,
@@ -35,6 +100,8 @@ export default function Card({
   typePrice,
   featurePrice,
 }) {
+  const [open, setOpen] = useState(false);
+  const captionsRef = useRef();
   const classNames = [className];
   if (isRed)
     classNames.push(
@@ -47,21 +114,42 @@ export default function Card({
   if (isPortofolio) {
     return (
       <div className='max-w-[375px] max-h-[275px] overflow-hidden transition-all duration-200 hover:scale-105'>
-        <CustomButton
+        <button
           id={titlePortofolio}
-          isExternal
-          type='link'
-          ariaLabel=''
-          target='_blank'
-          href={href}>
+          onClick={() => setOpen(true)}>
           <Image
-            src={portofolioImageUrl}
             width={375}
             height={275}
+            src={portofolioImageUrl}
             alt={titlePortofolio}
             className='w-full h-full'
           />
-        </CustomButton>
+        </button>
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          slides={[
+            {
+              title: titlePortofolio,
+              alt: titlePortofolio,
+              src: portofolioImageUrl,
+            },
+          ]}
+          render={{
+            slide: NextJsImage,
+            buttonNext: () => null,
+            buttonPrev: () => null,
+          }}
+          on={{
+            click: () => {
+              (captionsRef.current?.visible
+                ? captionsRef.current?.hide
+                : captionsRef.current?.show)?.();
+            },
+          }}
+          plugins={[Captions]}
+          captions={{ ref: captionsRef }}
+        />
       </div>
     );
   }
