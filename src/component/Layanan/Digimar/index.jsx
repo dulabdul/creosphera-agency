@@ -40,15 +40,15 @@ export default function Marketing() {
   ];
   const dataPrice = [
     {
-      price: 299,
+      price: 399,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'essential',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20essential',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
+      description: '',
       fitur: [
         {
-          name: 'Maksimal Budget Iklan 20K/Hari',
+          name: 'Maksimal Budget Iklan 40K/Hari',
         },
         {
           name: 'Include pajak iklan 11%',
@@ -71,12 +71,12 @@ export default function Marketing() {
       ],
     },
     {
-      price: 469,
+      price: 979,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'enterprise',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enterprise',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
+      description: '',
       fitur: [
         {
           name: 'Maksimal Budget Iklan 50K/Hari',
@@ -102,15 +102,15 @@ export default function Marketing() {
       ],
     },
     {
-      price: 329,
+      price: 499,
       suffix: 'ribu',
       serviceParent: 'digital marketing',
       type: 'enhanced',
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20digital%20marketing%20type%20enhanced',
-      description: 'cocok untuk website ecommerce, web traffic tinggi',
+      description: '',
       fitur: [
         {
-          name: 'Maksimal Budget Iklan 40K/Hari',
+          name: 'Maksimal Budget Iklan 50K/Hari',
         },
         {
           name: 'Include pajak iklan 11%',
@@ -125,7 +125,7 @@ export default function Marketing() {
           name: 'Setup google analytics',
         },
         {
-          name: '3x report/week',
+          name: '4x report/week',
         },
         {
           name: 'Durasi Iklan 7 Hari',

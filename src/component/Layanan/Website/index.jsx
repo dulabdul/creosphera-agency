@@ -235,6 +235,57 @@ export default function Content() {
         },
       ],
     },
+    {
+      price: 550,
+      suffix: 'ribu',
+      serviceParent: 'webdev',
+      type: 'Native',
+      url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enhanced',
+
+      description:
+        'Menyediakan pembuatan website dengan native, cocok untuk convert desain to website atau website landing page',
+      fitur: [
+        {
+          name: 'HTML',
+        },
+        {
+          name: 'Tailwind CSS/Bootstrap CSS',
+        },
+        {
+          name: 'Javascriptt',
+        },
+        {
+          name: 'Next JS',
+        },
+        {
+          name: 'termasuk hosting',
+        },
+        {
+          name: 'Lebih Cepat',
+        },
+        {
+          name: 'Source Code',
+        },
+        {
+          name: 'fitur chat whatsapp',
+        },
+        {
+          name: 'intregrasi sosial media',
+        },
+        {
+          name: 'Unlimited Revisi',
+        },
+        {
+          name: 'security SSL + HTTPS',
+        },
+        {
+          name: 'Full Support',
+        },
+        {
+          name: 'Unlimited Garansi',
+        },
+      ],
+    },
   ];
   return (
     // Start Content
@@ -323,7 +374,7 @@ export default function Content() {
           title='harga kami'
           description='Paket harga jasa pembuatan website'
         />
-        <div className='py-12 md:py-24 flex flex-wrap md:flex-nowrap justify-center items-center gap-x-4 gap-y-5'>
+        <div className='py-12 w-full xl:w-[1140px] mx-auto md:py-24 flex flex-wrap md:flex-wrap justify-center items-center gap-x-4 gap-y-5'>
           {dataPrice.map((items, index) => {
             return index % 2 === 0 ? (
               <Card
@@ -340,7 +391,7 @@ export default function Content() {
               />
             ) : (
               <Card
-                className='h-[1050px]'
+                className='max-h-[1050px]'
                 serviceParent={items.serviceParent}
                 price={items.price}
                 descriptionPrice={items.description}

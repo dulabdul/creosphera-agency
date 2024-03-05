@@ -50,13 +50,13 @@ export default function Footer() {
           ? ''
           : 'bg-[url(/images/bg-wave-footer.svg)] bg-no-repeat bg-cover'
       }`}>
-      <div className='z-10 w-full h-[80vh] absolute'>
+      <div className='z-10 w-full absolute'>
         <Image
           alt='Spiral'
           src='/images/spiral_footer.png'
           width={1080}
-          height={1245}
-          className='w-full h-full'
+          height={600}
+          className='w-full h-[100vh] md:max-h-[50vh] xl:max-h-[700px]'
         />
       </div>
       <div className='container px-4 mx-auto z-20 relative pt-32 pb-12 xl:pt-72 xl:pb-16'>

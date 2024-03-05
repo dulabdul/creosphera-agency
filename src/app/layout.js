@@ -6,7 +6,8 @@ import GoogleTagManager from '@/component/Analytics/GoogleTagManager';
 // Font files can be colocated inside of `app`
 
 export const metadata = {
-  description: 'Kembangkan bisnis anda dengan creosphera',
+  description:
+    'Creosphera menyediakan berbagai jasa digital seperti web development dan digital marketing. Konsultasikan kebutuhan bisnis Anda secara gratis bersama kami, kami menempatkan client sebagai prioritas tertinggi kami. Jangan ragu untuk menghubungi kami',
   robots: {
     index: true,
     follow: true,
@@ -38,6 +39,8 @@ export const metadata = {
     'jasa bikin website',
     'jasa wordpress',
     'jasa google ads',
+    'jasa iklan google ads',
+    'jasa pembuatan website',
   ],
   alternates: {
     canonical: 'https://creosphera.com',
@@ -51,7 +54,8 @@ export const metadata = {
       default: 'Creosphera',
       template: '%s | Creosphera',
     },
-    description: 'Kembangkan bisnis anda dengan creosphera',
+    description:
+      'Creosphera menyediakan berbagai jasa digital seperti web development dan digital marketing. Konsultasikan kebutuhan bisnis Anda secara gratis bersama kami, kami menempatkan client sebagai prioritas tertinggi kami. Jangan ragu untuk menghubungi kami',
     url: 'https://creosphera.com',
     siteName: 'Creosphera',
     images: '/images/logo/creosphera.png',
