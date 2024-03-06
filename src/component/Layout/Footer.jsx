@@ -98,7 +98,7 @@ export default function Footer() {
               })}
             </ul>
           </div>
-          <div className='flex w-full md:w-1/2 xl:w-1/5  flex-col gap-2'>
+          {/* <div className='flex w-full md:w-1/2 xl:w-1/5  flex-col gap-2'>
             <p className='text-primary font-light text-lg md:text-xl'>Social</p>
             <ul>
               {menuData.social.map((item, index) => {
@@ -117,7 +117,7 @@ export default function Footer() {
                 );
               })}
             </ul>
-          </div>
+          </div> */}
           <div className='flex w-full md:w-1/2 xl:w-1/5  flex-col gap-2'>
             <p className='text-primary font-light text-lg md:text-xl'>
               AFFILIATE
