@@ -11,7 +11,7 @@ import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
-import Inline from 'yet-another-react-lightbox/plugins/inline';
+
 import {
   isImageFitCover,
   isImageSlide,
