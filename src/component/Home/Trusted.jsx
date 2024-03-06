@@ -1,5 +1,4 @@
 import React from 'react';
-import CarouselSlider from '../Carousel/CarouselClient';
 import Card from '../Card';
 import CustomButton from '../Button';
 import { FaHandHoldingDollar } from 'react-icons/fa6';
