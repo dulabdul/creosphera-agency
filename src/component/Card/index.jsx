@@ -10,6 +10,8 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+
 import {
   isImageFitCover,
   isImageSlide,
@@ -102,6 +104,7 @@ export default function Card({
 }) {
   const [open, setOpen] = useState(false);
   const captionsRef = useRef();
+  const zoomRef = useRef();
   const classNames = [className];
   if (isRed)
     classNames.push(
@@ -128,6 +131,25 @@ export default function Card({
         <Lightbox
           open={open}
           close={() => setOpen(false)}
+          toolbar={{
+            buttons: [
+              href === undefined ? (
+                <></>
+              ) : (
+                <button
+                  key='my-button'
+                  type='button'
+                  className='yarl__button'>
+                  <a
+                    href={href}
+                    target='_blank'>
+                    Open Portofolio
+                  </a>
+                </button>
+              ),
+              'close',
+            ],
+          }}
           slides={[
             {
               title: titlePortofolio,
@@ -135,6 +157,7 @@ export default function Card({
               src: portofolioImageUrl,
             },
           ]}
+          plugins={[Captions, Zoom]}
           render={{
             slide: NextJsImage,
             buttonNext: () => null,
@@ -147,9 +170,25 @@ export default function Card({
                 : captionsRef.current?.show)?.();
             },
           }}
-          plugins={[Captions]}
+          zoom={{ ref: zoomRef }}
+          inline={{
+            style: {
+              imageFit: 'cover',
+              width: '100%',
+              maxWidth: '900px',
+              aspectRatio: '3 / 2',
+            },
+          }}
           captions={{ ref: captionsRef }}
         />
+
+        <button
+          type='button'
+          onClick={() => zoomRef.current?.zoomIn()}></button>
+
+        <button
+          type='button'
+          onClick={() => zoomRef.current?.zoomOut()}></button>
       </div>
     );
   }

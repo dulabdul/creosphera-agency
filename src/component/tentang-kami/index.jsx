@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Card from '../Card';
 import FlashCard from '../Card/FlashCard';
-import CustomButton from '../Button';
 
 export default function TentangKami() {
   const data = [
