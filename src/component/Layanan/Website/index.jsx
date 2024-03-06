@@ -243,7 +243,7 @@ export default function Content() {
       url: 'https://api.whatsapp.com/send?phone=6289675293838&text=Halo%20saya%20ingin%20berkonsultasi%20dan%20bertanya%20lebih%20lanjut%20tentang%20paket%20web%20development%20type%20enhanced',
 
       description:
-        'Menyediakan pembuatan website dengan native, cocok untuk convert desain to website atau website landing page',
+        'Menyediakan pembuatan website dengan native, cocok untuk slicing atau website landing page',
       fitur: [
         {
           name: 'HTML',
@@ -283,6 +283,9 @@ export default function Content() {
         },
         {
           name: 'Unlimited Garansi',
+        },
+        {
+          name: 'Static Page/ API Request',
         },
       ],
     },
