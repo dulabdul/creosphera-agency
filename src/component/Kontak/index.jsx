@@ -70,15 +70,16 @@ export default function ContactPage() {
         <div className='flex py-12 flex-col md:flex-row items-center justify-center gap-x-4 gap-y-2'>
           <div className='mt-8 md:my-16 p-6 max-w-[380px] md:min-w-[380px] h-full bg-gradient-to-br rounded-md from-[#FFE9E9] via-cyan-rgba to-[#FFF3CA]'>
             <div className='bg-white rounded-lg max-w-[330px] md:min-w-[330px] p-6 flex flex-col'>
-              <div className='max-w-[150px] bg-[#FFDC60] px-4 py-1 rounded-full flex items-center justify-start'>
-                Telephone
+              <div className='max-w-[200px] bg-[#FFDC60] px-4 py-1 rounded-full flex items-center justify-start'>
+                Telephone/Whatsapp
               </div>
               <hr className='my-4' />
               <div className='flex items-center gap-x-2'>
-                <FaWhatsapp className='text-2xl text-[#5956E8]' />
+                <FaWhatsapp className='text-4xl text-[#5956E8]' />
                 <div className='flex flex-col'>
                   <CustomButton
                     isExternal
+                    className='text-2xl hover:underline transition-all hover:text-sekunder'
                     target='_blank'
                     ariaLabel='Telepon Sekarang'
                     type='link'
