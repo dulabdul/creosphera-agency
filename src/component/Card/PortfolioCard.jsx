@@ -4,6 +4,8 @@ import CustomButton from '../Button';
 import { Dropdown } from 'flowbite-react';
 import Card from '.';
 import { usePathname } from 'next/navigation';
+
+import 'yet-another-react-lightbox/styles.css';
 export default function PortfolioCard() {
   const pathName = usePathname();
   const data = {
