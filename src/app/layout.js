@@ -31,6 +31,7 @@ export const metadata = {
   applicationName: 'Creosphera Website',
   referrer: 'origin-when-cross-origin',
   keywords: [
+    'creosphera',
     'jasa website',
     'jasa digital marketing',
     'jasa website jakarta',
